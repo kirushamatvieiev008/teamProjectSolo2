@@ -1,0 +1,14 @@
+body {
+    background-image: url('images/background/backGround.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #BDBDBD;
+}
+
+.container {
+    width: 1090px;
+    margin: 0 auto;
+    outline: solid 1px red;
+    background-color: white;
+}
