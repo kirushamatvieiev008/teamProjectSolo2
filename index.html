@@ -10,9 +10,112 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="blur">
+      <div class="helloBlock">
+        <button class="close">
+          <img src="images/intro/close.png" alt="#" />
+        </button>
+        <img
+          class="imgsBackIntro imgIntro1"
+          src="images/intro/knife.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro2"
+          src="images/intro/playConsole.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro3"
+          src="images/intro/puzzle.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro4"
+          src="images/intro/ticTacToy.png"
+          alt="#"
+        />
+        <p class="introtext">
+          Привіт! <br />
+          Ви потрапили на сайт інтерактивних ігор та завдань <br />
+          Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br />
+          Бажаємо Вам гарно провести час!
+        </p>
+        <span class="enterName">Введіть своє ім’я:</span>
+        <form class="formLogIn" action="">
+          <input
+            class="inpLogIn"
+            placeholder="Ваше ім’я..."
+            type="text"
+            name=""
+            id=""
+          />
+          <button class="apply">Зберегти</button>
+        </form>
+        <div class="error">ви не можете бути пустим місцем)</div>
+      </div>
+      <div class="thankBlock">
+        <button class="closeThanks">
+          <img src="images/intro/close.png" alt="#" />
+        </button>
+        <img
+          class="imgsBackIntro imgIntro11"
+          src="images/intro/knife.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro22"
+          src="images/intro/playConsole.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro33"
+          src="images/intro/puzzle.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro44"
+          src="images/intro/ticTacToy.png"
+          alt="#"
+        />
+        <p class="thanks">Дякую за підписку!</p>
+      </div>
+      <!-- <div class="thankBlock">
+        <p class="thanks">Дякую за підписку!</p>
+        <button class="close">
+          <img src="images/intro/close.png" alt="#" />
+        </button>
+        <img
+          class="imgsBackIntro imgIntro1THank"
+          src="images/intro/knife.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro2THank"
+          src="images/intro/playConsole.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro3THank"
+          src="images/intro/puzzle.png"
+          alt="#"
+        />
+        <img
+          class="imgsBackIntro imgIntro4THank"
+          src="images/intro/ticTacToy.png"
+          alt="#"
+        />
+      </div> -->
+    </div>
     <header>
       <div class="container">
         <div class="DivFelexHeader">
@@ -350,21 +453,29 @@
             alt="#"
           />
           <ul class="ulLinksFoot">
-            <li><a class="linksFooter" href="#">Тел: +38 (123) 456 78 90</a></li>
-            <li><a class="linksFooter" href="#">E-Mail: codingmagic@gmail.com</a></li>
+            <li>
+              <a class="linksFooter" href="#">Тел: +38 (123) 456 78 90</a>
+            </li>
+            <li>
+              <a class="linksFooter" href="#">E-Mail: codingmagic@gmail.com</a>
+            </li>
             <li><a class="linksFooter" href="#">Facebook: CodingMagic</a></li>
             <li><a class="linksFooter" href="#">Twitter: CodingMagic</a></li>
             <li><a class="linksFooter" href="#">Instagram: CodingMagic</a></li>
           </ul>
           <div class="forNotification">
             <form class="formFoot" action="">
-            <input class="inpEmail" type="text" placeholder="Ваша ел. адреса..." />
-            <button class="subscribe" type="submit">Підписатись</button>
-          </form>
-          <div class="notification">
+              <input
+                class="inpEmail"
+                type="text"
+                placeholder="Ваша ел. адреса..."
+              />
+              <button class="subscribe" type="submit">Підписатись</button>
+            </form>
+            <div class="notification">
               *Підписавшись, Ви зможете ортимувати інформаццію про новинки на
               сайті
-            </div> 
+            </div>
           </div>
         </div>
       </div>

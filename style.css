@@ -1,3 +1,234 @@
+.blur {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    z-index: 1;
+    position: absolute;
+}
+
+.thankBlock {
+    display: none;
+    width: 463px;
+    height: 245px;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 5;
+    /* margin-top: 50%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin: 0; */
+    transform: translate(-50%, -50%);
+    /* margin: 50% 50% 0 0; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.closeThanks {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.helloBlock {
+    width: 576px;
+    height: 316px;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 5;
+    /* margin-top: 50%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin: 0; */
+    transform: translate(-50%, -50%);
+    /* margin: 50% 50% 0 0; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.imgsBackIntro {
+    width: 30px;
+    position: absolute;
+}
+
+.imgIntro1 {
+    top: 154px;
+    left: 41px;
+}
+
+.imgIntro11 {
+    top: 69px;
+    left: 43px;
+}
+
+.imgIntro2 {
+    top: 154px;
+    right: 41px;
+}
+
+.imgIntro22 {
+    top: 69px;
+    right: 43px;
+}
+
+.imgIntro3 {
+    top: 230px;
+    left: 85px;
+}
+
+.imgIntro33 {
+    top: 145px;
+    left: 86px;
+}
+
+.imgIntro4 {
+    top: 230px;
+    right: 85px;
+}
+
+.imgIntro44 {
+    top: 145px;
+    right: 86px;
+}
+
+.introtext {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    width: 400px;
+    line-height: 100%;
+    margin: 0 auto;
+    margin-top: 46px;
+    line-height: 15px;
+}
+
+.close {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.closeThanks {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.enterName {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    display: block;
+    margin-top: 42px;
+    margin-bottom: 18px;
+    text-align: center;
+
+}
+
+.inpLogIn {
+    width: 169px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20px;
+    padding-left: 10px;
+    border: none;
+
+}
+
+.inpLogIn::placeholder {
+    color: #7E7E7E;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formLogIn {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.apply {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+    border-radius: 20px;
+    width: 105px;
+    height: 35px;
+    margin-top: 18px;
+}
+
+.imgIntro1THank {
+    top: 69px;
+    left: 43px;
+}
+
+.imgIntro2THank {
+    top: 69px;
+    right: 43px;
+}
+
+.imgIntro3THank {
+    top: 145px;
+    right: 86px;
+}
+
+.imgIntro4THank {
+    top: 145px;
+    left: 86px;
+}
+
+.thanks {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 83px;
+}
+
+.error {
+    display: none;
+    text-align: center;
+    margin-top: 15px;
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+}
+
+/* 
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
 body {
     background-image: url('images/background/backGround.png');
     background-position: center;
@@ -23,7 +254,7 @@ ul {
     margin: 0 auto;
     /* outline: solid 1px red; */
     background-color: white;
-    height: 100%;
+    /* height: 100%; */
 }
 
 body {
@@ -33,6 +264,9 @@ body {
 header {
     width: 100%;
     background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .logoHeader {
@@ -514,6 +748,8 @@ footer {
     height: 1440px;
     height: 220px;
     background-color: #FFFFFF;
+    display: flex;
+    /* align-items: center; */
 }
 
 .logoFooter {
