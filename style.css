@@ -6,9 +6,588 @@ body {
     background-color: #BDBDBD;
 }
 
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .container {
+    margin: 0;
     width: 1090px;
     margin: 0 auto;
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
+    background-color: white;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
     background-color: white;
 }
+
+.logoHeader {
+    width: 93px;
+    height: 38.15px;
+}
+
+.DivFelex {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 36px;
+}
+
+.DivFelexHeader {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    /* margin-bottom: 36px; */
+}
+
+.interactiveTick {
+    width: 9px;
+    margin: 0;
+    padding-left: 6px;
+}
+
+.ulNavig {
+    display: flex;
+    gap: 50px;
+    margin-left: 81px;
+    margin-right: 361px;
+}
+
+.aMenu {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hello {
+    color: #000000;
+    margin-left: 51px;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sunMoon {
+    width: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 36px;
+    margin-bottom: 36px;
+}
+
+.line {
+    width: 536px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #000000;
+
+}
+
+h3 {
+    color: #000000;
+    font-size: 16px;
+    /* margin: 0 auto; */
+    text-align: center;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    margin-bottom: 36px;
+    margin-top: 36px;
+}
+
+.enterYear {
+    padding-left: 10px;
+    width: 205px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20PX;
+    border: none;
+    box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+}
+
+.enterYear:focus {
+    border: none;
+}
+
+.enterYear::placeholder {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #7E7E7E;
+    /* padding-left: 10px; */
+}
+
+.enterYear::-moz-focus-inner {
+    border: none;
+}
+
+.lupaBtn {
+    margin-left: -35px;
+    width: 35px;
+    height: 37px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #000000;
+    border: none;
+}
+
+.luppa {
+    width: 15px;
+}
+
+.formYear {
+    /* margin-top: 36px; */
+    display: flex;
+    width: 217px;
+    margin-left: 275px;
+    margin-right: 149px;
+}
+
+.congratulations {
+    color: #039900;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.uBorn {
+    color: #039900;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formGuess {
+    display: flex;
+    margin-right: 202px;
+    margin-left: 275px;
+}
+
+.inpSec2 {
+    width: 150px;
+}
+
+.game3Ul {
+    display: flex;
+    width: 256px;
+    height: 60px;
+    margin-left: 435px;
+    justify-content: space-between;
+    margin-right: 104px;
+}
+
+.imgsGame3 {
+    width: 60px;
+}
+
+.judge {
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 170%;
+}
+
+.checlCPVariant {
+    width: 182px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    margin: 36px auto;
+    display: block;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.enterNumCulc {
+    width: 135px;
+    height: 35px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(0, 0, 0, 0.25);
+    border: none;
+    background-color: #D7D7D7;
+    /* color: #7E7E7E; */
+}
+
+.enterNumCulc::placeholder {
+    padding-left: 20px;
+    color: #7E7E7E;
+}
+
+.ulCulc {
+    display: flex;
+    width: 62px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.indexCulc {
+    background-color: #000000;
+    box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+    border-radius: 100%;
+    border: none;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+}
+
+.gameCulc {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    margin-right: 38px;
+}
+
+
+.DivFelex4Sect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.equal {
+    margin-right: 38px;
+}
+
+.numberCulcTime {
+    width: 150px;
+}
+
+.formCulcTime {
+    margin-left: 330px;
+    display: flex;
+}
+
+.divCulcTime {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+    gap: 30px;
+}
+
+.dinosour {
+    width: 720px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.peech {
+    position: relative;
+    width: 720px;
+    height: 220px;
+    border-radius: 37px;
+    background-color: #5ABB58;
+    outline: solid black 2px;
+    margin: 0 auto;
+}
+
+.ball {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.DivFelexBiggestNum {
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+
+.theLargest {
+    margin-top: 36px;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.ourTeam {
+    text-align: center;
+}
+
+.rightBtn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.tickRight {
+    width: 50px;
+}
+
+.DivFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftBtn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transform: rotate(180deg);
+}
+
+.imgTeam {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    margin: 0 auto;
+}
+
+.blockFlex {
+    display: flex;
+    width: 100%;
+}
+
+.studentName {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    margin: 20px auto;
+}
+
+.studentInfo {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.navPhoto {
+    background-color: #00000000;
+    border: none;
+    margin-bottom: 36px;
+}
+
+.photoLink {
+    width: 18px;
+    height: 3px;
+    background-color: #D9D9D9;
+    border-radius: 3px;
+
+}
+
+.orderedPhoto {
+    width: 30px;
+    background-color: #797979;
+}
+
+.scientists {
+    display: flex;
+    margin: 0 auto;
+    /* gap: 59px; */
+    flex-wrap: wrap;
+    width: 577px;
+    row-gap: 36px;
+    column-gap: 59px;
+}
+
+.scientistImages {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+}
+
+.liCategories {
+    width: 490px;
+}
+
+.category {
+    color: #FFFFFF;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: #000000;
+    box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+    height: 35px;
+}
+
+.liCategories1 {
+    text-align: right;
+}
+
+.liCategories2 {
+    text-align: left;
+}
+
+.nineteenCentuty {
+    width: 227px;
+}
+
+.einshtein {
+    width: 298px;
+}
+
+.alfabet {
+    width: 282px;
+}
+
+.leterS {
+    width: 441px;
+}
+
+.years {
+    width: 380px;
+}
+
+.dectroyA {
+    width: 375px;
+}
+
+.laterScietist {
+    width: 329px;
+}
+
+.theMostAndOposite {
+    height: 50px;
+    width: 368px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sameletters {
+    width: 489px;
+}
+
+.categoriesUl {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    row-gap: 20px;
+    margin-top: 36px;
+    padding-bottom: 23px;
+}
+
+.liCategoriesLast {
+    text-align: center;
+}
+
+footer {
+    height: 1440px;
+    height: 220px;
+    background-color: #FFFFFF;
+}
+
+.logoFooter {
+    width: 165px;
+    margin-right: 185px;
+    height: 70px;
+}
+
+.footerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.linksFooter {
+    line-height: 170%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.ulLinksFoot {
+    margin-right: 187px;
+}
+
+.inpEmail {
+    width: 204px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20px;
+    border: none;
+}
+
+.inpEmail::placeholder {
+    color: #7E7E7E;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.formFoot {
+    display: flex;
+    gap: 36px;
+}
+
+.subscribe {
+    background-color: #000;
+    height: 35px;
+    width: 107px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+
+}
+
+.notification {
+    font-size: 6px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 18px;
+}
+
+/* 
+.montserrat-alternates-regular {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/

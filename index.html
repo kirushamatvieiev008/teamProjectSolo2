@@ -4,33 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>roject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <!-- <svg>
+        <div class="DivFelexHeader">
+          <!-- <svg>
           <use href=""></use>
         </svg> -->
-        <img src="images/header/logoHeader.png" alt="logo" />
-        <nav>
-          <ul>
-            <li>
-              <a href=""
-                >Інтерактив <img src="images/header/tick.png" alt="#"
-              /></a>
-            </li>
-            <li><a href="">Наша команда</a></li>
-            <li><a href="">Контакти</a></li>
-          </ul>
-        </nav>
-        <div>
-          <!-- <svg>
+          <img
+            class="logoHeader"
+            src="images/header/logoHeader.png"
+            alt="logo"
+          />
+          <nav>
+            <ul class="ulNavig">
+              <li>
+                <a class="aMenu" href="#"
+                  >Інтерактив
+                  <img
+                    class="interactiveTick"
+                    src="images/header/tick.png"
+                    alt="#"
+                /></a>
+              </li>
+              <li><a class="aMenu" href="#">Наша команда</a></li>
+              <li><a class="aMenu" href="#">Контакти</a></li>
+            </ul>
+          </nav>
+          <div>
+            <!-- <svg>
             <use href=""></use>
           </svg> -->
-          <img src="images/header/sunButton.png" alt="#" />
+            <img class="sunMoon" src="images/header/sunButton.png" alt="#" />
+          </div>
+          <span class="hello">Вітаємо, User!</span>
         </div>
-        <span>Вітаємо, User!</span>
       </div>
     </header>
     <main>
@@ -41,196 +57,280 @@
         </section>
         <section>
           <h3>Перевір в який рік ти народився</h3>
-          <form action="">
-            <input
-              type="number"
-              name=""
-              id=""
-              placeholder="Введіть рік народження"
-            />
-            <button type="submit">
-              <img src="./images/main/search.png" alt="#" />
-            </button>
-          </form>
-          <span>Ви народилися у високосний рік!</span>
+          <div class="DivFelex">
+            <form class="formYear" action="#">
+              <input
+                class="enterYear"
+                type="number"
+                name=""
+                id=""
+                placeholder="Введіть рік народження"
+              />
+              <button class="lupaBtn" type="submit">
+                <img class="luppa" src="./images/main/search.png" alt="#" />
+              </button>
+            </form>
+            <span class="uBorn">Ви народилися у високосний рік!</span>
+          </div>
           <div class="line"></div>
         </section>
         <section>
           <h3>Вгадай число, яке загадав комп’ютер</h3>
-          <form action="">
-            <input type="number" name="" id="" placeholder="Введіть число" />
-            <button type="submit">
-              <img src="./images/main/search.png" alt="#" />
-            </button>
-          </form>
-          <span>Вітаю, ви вгадали число! (number) </span>
+          <div class="DivFelex">
+            <form class="formGuess" action="">
+              <input
+                class="enterYear inpSec2"
+                type="number"
+                name=""
+                id=""
+                placeholder="Введіть число"
+              />
+              <button class="lupaBtn" type="submit">
+                <img class="luppa" src="./images/main/search.png" alt="#" />
+              </button>
+            </form>
+            <span class="congratulations"
+              >Вітаю, ви вгадали число! (number)
+            </span>
+          </div>
           <div class="line"></div>
         </section>
         <section>
           <h3>Камінь - ножиці - папір</h3>
-          <ul>
-            <li><img src="./images/main/rock.png" alt="#" /></li>
-            <li><img src="./images/main/scissors.png" alt="#" /></li>
-            <li><img src="./images/main/paper.png" alt="#" /></li>
-          </ul>
-          <div>Рахунок:</div>
-          <div>Комп’ютер - 0</div>
-          <div>Ви - 0</div>
-          <span>Ви виграли раунд!</span>
-          <button type="button">Варіант комп’ютера</button>
+          <div class="DivFelex">
+            <ul class="game3Ul">
+              <li>
+                <img class="imgsGame3" src="./images/main/rock.png" alt="#" />
+              </li>
+              <li>
+                <img
+                  class="imgsGame3"
+                  src="./images/main/scissors.png"
+                  alt="#"
+                />
+              </li>
+              <li>
+                <img class="imgsGame3" src="./images/main/paper.png" alt="#" />
+              </li>
+            </ul>
+            <div>
+              <div class="judge">Рахунок:</div>
+              <div class="judge">Комп’ютер - 0</div>
+              <div class="judge">Ви - 0</div>
+            </div>
+          </div>
+          <div class="congratulations">Ви виграли раунд!</div>
+          <button class="checlCPVariant" type="button">
+            Варіант комп’ютера
+          </button>
           <div class="line"></div>
         </section>
         <section>
           <h3>Калькулятор</h3>
-          <form action="">
-            <input type="number" placeholder="Введіть число" />
-            <button type="button">+</button>
-            <button type="button">*</button>
-            <button type="button">-</button>
-            <button type="button">/</button>
-            <input type="number" placeholder="Введіть число" />
-          </form>
-          <button type="button">=</button>
-          <div>Результат</div>
+          <div class="DivFelex4Sect">
+            <form class="gameCulc" action="">
+              <input
+                class="enterNumCulc"
+                type="number"
+                placeholder="Введіть число"
+              />
+              <ul class="ulCulc">
+                <li><button class="indexCulc plus" type="button">+</button></li>
+                <li><button class="indexCulc upTo" type="button">*</button></li>
+                <li>
+                  <button class="indexCulc minus" type="button">-</button>
+                </li>
+                <li>
+                  <button class="indexCulc slash" type="button">/</button>
+                </li>
+              </ul>
+              <input
+                class="enterNumCulc"
+                type="number"
+                placeholder="Введіть число"
+              />
+            </form>
+            <button class="indexCulc equal" type="button">=</button>
+            <div>Результат</div>
+          </div>
           <div class="line"></div>
         </section>
         <section>
           <h3>Калькулятор часу</h3>
-          <form action="">
-            <input type="number" placeholder="Введіть число" />
-            <button type="submit">
-              <img src="./images/main/search.png" alt="#" />
-            </button>
-          </form>
-          <div>- - - - - - - -</div>
-          <div>3 дн. 15:45:01</div>
+          <div class="divCulcTime">
+            <form class="formCulcTime" action="">
+              <input
+                class="enterYear numberCulcTime"
+                type="number"
+                placeholder="Введіть число"
+              />
+              <button class="lupaBtn" type="submit">
+                <img class="luppa" src="./images/main/search.png" alt="#" />
+              </button>
+            </form>
+            <div>- - - - - - - -</div>
+            <div>3 дн. 15:45:01</div>
+          </div>
           <div class="line"></div>
         </section>
         <section>
           <h3>Google динозавр</h3>
-          <img src="./images/main/GoogleDino.png" alt="dino" />
+          <img class="dinosour" src="./images/main/GoogleDino.png" alt="dino" />
+          <div class="line"></div>
         </section>
-        <section>
+        <section class="try">
           <h3>Футбол</h3>
-          <img src="./images/main/footballPeech.png" alt="#" />
-          <img src="./images/main/footBall.png" alt="#" />
+          <div class="peech forRelative">
+            <img class="ball" src="./images/main/footBall.png" alt="#" />
+          </div>
         </section>
         <section>
           <h3>Введіть 3 числа</h3>
-          <input type="number" placeholder="Введіть число" />
-          <input type="number" placeholder="Введіть число" />
-          <input type="number" placeholder="Введіть число" />
-          <div>Найбільше число, яке ви ввели - (число)</div>
+          <div class="DivFelexBiggestNum">
+            <input
+              class="enterNumCulc bigNum1"
+              type="number"
+              placeholder="Введіть число"
+            />
+            <input
+              class="enterNumCulc bigNum2"
+              type="number"
+              placeholder="Введіть число"
+            />
+            <input
+              class="enterNumCulc bigNum3"
+              type="number"
+              placeholder="Введіть число"
+            />
+          </div>
+          <div class="theLargest">Найбільше число, яке ви ввели - (число)</div>
+          <div class="line"></div>
         </section>
-        <section>
+        <section class="ourTeam">
           <h3>Наша команда</h3>
-          <button><img src="./images/main/btnLeft.png" alt="" /></button>
-          <!-- <img src="" alt="" /> -->
-          <div class="img"></div>
-          <span>Ім’я студента</span>
-          <p>Інформація про роботу, яку він/вона виконав/ла</p>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
-          <button>-</button>
+          <div class="blockFlex">
+            <button class="leftBtn">
+              <img class="tickRight" src="./images/main/btnLeft.png" alt="" />
+            </button>
+            <!-- <img src="" alt="" /> -->
+            <div class="imgTeam"></div>
+            <button class="rightBtn">
+              <img class="tickRight" src="./images/main/btnLeft.png" alt="" />
+            </button>
+          </div>
+
+          <p class="studentName">Ім’я студента</p>
+          <p class="studentInfo">
+            Інформація про роботу, яку він/вона виконав/ла
+          </p>
+          <button class="navPhoto">
+            <div class="photoLink orderedPhoto"></div>
+          </button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
+          <button class="navPhoto"><div class="photoLink"></div></button>
           <div class="line"></div>
         </section>
         <section>
           <h3>Обери вченого/их</h3>
-          <ul>
+          <ul class="scientists">
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
             <li>
               <!-- <img src="" alt=""> -->
-              <div></div>
+              <div class="scientistImages"></div>
             </li>
           </ul>
-          <ul>
-            <li>
-              <button type="button">Які вчені народилися в 19 ст.</button>
+          <ul class="categoriesUl">
+            <li class="liCategories liCategories1">
+              <button class="category nineteenCentuty" type="button">
+                Які вчені народилися в 19 ст.
+              </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories2">
+              <button class="category einshtein" type="button">
                 Знайти рік народження Albert Einshtein
               </button>
             </li>
-            <li>
-              <button type="button">Відсортувати вчених за алфавітом</button>
+            <li class="liCategories liCategories1">
+              <button class="category alfabet" type="button">
+                Відсортувати вчених за алфавітом
+              </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories2">
+              <button class="category leterS" type="button">
                 Знайти вчених, прізвища яких починаються на на літеру “С”
               </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories1">
+              <button class="category years" type="button">
                 Відсортувати вчених за кількістю прожитих років
               </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories2">
+              <button class="category dectroyA" type="button">
                 Видалити всіх вчених, ім’я яких починається на “А”
               </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories1">
+              <button class="category laterScietist" type="button">
                 Знайти вченого, який народився найпізніше
               </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategories2">
+              <button class="category theMostAndOposite" type="button">
                 Знайти вченого, який прожив найдовше і вченого, який прожив
                 найменше
               </button>
             </li>
-            <li>
-              <button type="button">
+            <li class="liCategories liCategoriesLast">
+              <button class="category sameletters" type="button">
                 Знайти вчених, в яких співпадають перші літери імені і прізвища
               </button>
             </li>
@@ -239,22 +339,35 @@
       </div>
     </main>
     <footer>
-      <!-- <svg>
+      <div class="container">
+        <div class="footerFlex">
+          <!-- <svg>
         <use href=""></use>
       </svg> -->
-      <img src="" alt="">
-      <ul>
-        <li><a href="">Тел: +38 (123) 456 78 90</a></li>
-        <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
-        <li><a href="">Facebook: CodingMagic</a></li>
-        <li><a href="">Twitter: CodingMagic</a></li>
-        <li><a href="">Instagram: CodingMagic</a></li>
-      </ul>
-      <form action="">
-        <input type="text" placeholder="Ваша ел. адреса..."/>
-        <button type="submit">Підписатись</button>
-      </form>
-      <div>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</div>
+          <img
+            class="logoFooter"
+            src="./images/footer/logoFooter.png"
+            alt="#"
+          />
+          <ul class="ulLinksFoot">
+            <li><a class="linksFooter" href="#">Тел: +38 (123) 456 78 90</a></li>
+            <li><a class="linksFooter" href="#">E-Mail: codingmagic@gmail.com</a></li>
+            <li><a class="linksFooter" href="#">Facebook: CodingMagic</a></li>
+            <li><a class="linksFooter" href="#">Twitter: CodingMagic</a></li>
+            <li><a class="linksFooter" href="#">Instagram: CodingMagic</a></li>
+          </ul>
+          <div class="forNotification">
+            <form class="formFoot" action="">
+            <input class="inpEmail" type="text" placeholder="Ваша ел. адреса..." />
+            <button class="subscribe" type="submit">Підписатись</button>
+          </form>
+          <div class="notification">
+              *Підписавшись, Ви зможете ортимувати інформаццію про новинки на
+              сайті
+            </div> 
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="./main.js"></script>
   </body>
