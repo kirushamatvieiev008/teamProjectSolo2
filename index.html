@@ -18,7 +18,7 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body class="noscroll">
     <div class="blur">
       <div class="helloBlock">
         <button class="close">
@@ -89,35 +89,9 @@
         />
         <p class="thanks">Дякую за підписку!</p>
       </div>
-      <!-- <div class="thankBlock">
-        <p class="thanks">Дякую за підписку!</p>
-        <button class="close">
-          <img src="images/intro/close.png" alt="#" />
-        </button>
-        <img
-          class="imgsBackIntro imgIntro1THank"
-          src="images/intro/knife.png"
-          alt="#"
-        />
-        <img
-          class="imgsBackIntro imgIntro2THank"
-          src="images/intro/playConsole.png"
-          alt="#"
-        />
-        <img
-          class="imgsBackIntro imgIntro3THank"
-          src="images/intro/puzzle.png"
-          alt="#"
-        />
-        <img
-          class="imgsBackIntro imgIntro4THank"
-          src="images/intro/ticTacToy.png"
-          alt="#"
-        />
-      </div> -->
     </div>
     <header>
-      <div class="container">
+    
         <div class="DivFelexHeader">
           <!-- <svg>
           <use href=""></use>
@@ -130,35 +104,45 @@
           <nav>
             <ul class="ulNavig">
               <li>
-                <a class="aMenu" href="#"
-                  >Інтерактив
+                <button class="buttonSettings">
+                  Інтерактив
                   <img
                     class="interactiveTick"
                     src="images/header/tick.png"
                     alt="#"
-                /></a>
+                  />
+                </button>
               </li>
-              <li><a class="aMenu" href="#">Наша команда</a></li>
-              <li><a class="aMenu" href="#">Контакти</a></li>
+              <li><a class="aMenu" href="#team">Наша команда</a></li>
+              <li><a class="aMenu" href="#footer">Контакти</a></li>
             </ul>
           </nav>
-          <div>
+          <button class="sunOrNight">
             <!-- <svg>
             <use href=""></use>
           </svg> -->
             <img class="sunMoon" src="images/header/sunButton.png" alt="#" />
-          </div>
+          </button>
           <span class="hello">Вітаємо, User!</span>
         </div>
-      </div>
+        <ul class="menuHeader">
+          <li>
+            <button class="siteSettingsBtns numberedGames">Числовий</button>
+          </li>
+          <li><button class="siteSettingsBtns playGames">Ігровий</button></li>
+          <li class="lastUlsettings">
+            <button class="siteSettingsBtns smartGames">Ознайомчий</button>
+          </li>
+        </ul>
+      
     </header>
     <main>
       <div class="container">
-        <section>
+        <section class="sec0">
           <h1>Популярні інетрактивні ігри</h1>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec1">
           <h3>Перевір в який рік ти народився</h3>
           <div class="DivFelex">
             <form class="formYear" action="#">
@@ -177,7 +161,7 @@
           </div>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec2">
           <h3>Вгадай число, яке загадав комп’ютер</h3>
           <div class="DivFelex">
             <form class="formGuess" action="">
@@ -198,7 +182,7 @@
           </div>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec3">
           <h3>Камінь - ножиці - папір</h3>
           <div class="DivFelex">
             <ul class="game3Ul">
@@ -228,7 +212,7 @@
           </button>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec4">
           <h3>Калькулятор</h3>
           <div class="DivFelex4Sect">
             <form class="gameCulc" action="">
@@ -258,7 +242,7 @@
           </div>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec5">
           <h3>Калькулятор часу</h3>
           <div class="divCulcTime">
             <form class="formCulcTime" action="">
@@ -276,18 +260,20 @@
           </div>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec6">
           <h3>Google динозавр</h3>
           <img class="dinosour" src="./images/main/GoogleDino.png" alt="dino" />
           <div class="line"></div>
         </section>
-        <section class="try">
+        <section class="try sec7">
           <h3>Футбол</h3>
           <div class="peech forRelative">
             <img class="ball" src="./images/main/footBall.png" alt="#" />
           </div>
+          <div class="forMargin"></div>
+          <div class="line"></div>
         </section>
-        <section>
+        <section class="sec8">
           <h3>Введіть 3 числа</h3>
           <div class="DivFelexBiggestNum">
             <input
@@ -309,7 +295,7 @@
           <div class="theLargest">Найбільше число, яке ви ввели - (число)</div>
           <div class="line"></div>
         </section>
-        <section class="ourTeam">
+        <section id="team" class="ourTeam sec9">
           <h3>Наша команда</h3>
           <div class="blockFlex">
             <button class="leftBtn">
@@ -338,7 +324,7 @@
           <button class="navPhoto"><div class="photoLink"></div></button>
           <div class="line"></div>
         </section>
-        <section>
+        <section class="sec10">
           <h3>Обери вченого/их</h3>
           <ul class="scientists">
             <li>
@@ -441,7 +427,7 @@
         </section>
       </div>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="container">
         <div class="footerFlex">
           <!-- <svg>

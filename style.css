@@ -1,9 +1,74 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.menuHeader {
+    display: none;
+    position: absolute;
+    left: 539px;
+    top: 47px;
+    list-style: none;
+    width: 160px;
+    height: 105px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #FFFFFF;
+    outline: solid 1px rgb(0, 0, 0);
+    z-index: 2;
+}
+
+.menuHeader li {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+}
+
+.menuHeader li:hover {
+    background-color: #F1F1F1;
+}
+
+.siteSettingsBtns {
+    background-color: #00000000;
+    border: none;
+    color: #000000;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+}
+
+.lastUlsettings {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.forMargin {
+    padding-bottom: 36px;
+}
+
 .blur {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.267);
-    z-index: 1;
+    z-index: 10;
     position: absolute;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+.sunOrNight {
+    background-color: #00000000;
+    border: none;
+    text-align: center;
+    display: flex;
+
 }
 
 .thankBlock {
@@ -13,14 +78,10 @@
     border-radius: 20px;
     background-color: #fff;
     z-index: 5;
-    /* margin-top: 50%; */
     position: absolute;
     top: 50%;
     left: 50%;
-    /* margin: 0; */
     transform: translate(-50%, -50%);
-    /* margin: 50% 50% 0 0; */
-    /* transform: translate(-50%, -50%); */
 }
 
 .closeThanks {
@@ -38,14 +99,10 @@
     border-radius: 20px;
     background-color: #fff;
     z-index: 5;
-    /* margin-top: 50%; */
     position: absolute;
     top: 50%;
     left: 50%;
-    /* margin: 0; */
     transform: translate(-50%, -50%);
-    /* margin: 50% 50% 0 0; */
-    /* transform: translate(-50%, -50%); */
 }
 
 .imgsBackIntro {
@@ -221,20 +278,13 @@
     font-size: 10px;
 }
 
-/* 
-.inter-<uniquifier> {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-} */
-
 body {
     background-image: url('images/background/backGround.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #BDBDBD;
+    margin: 0;
 }
 
 button {
@@ -252,18 +302,12 @@ ul {
     margin: 0;
     width: 1090px;
     margin: 0 auto;
-    /* outline: solid 1px red; */
     background-color: white;
-    /* height: 100%; */
-}
-
-body {
-    margin: 0;
 }
 
 header {
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 80px;
     display: flex;
     align-items: center;
@@ -277,19 +321,22 @@ header {
 .DivFelex {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    margin-bottom: 36px;
+    padding-bottom: 36px;
 }
 
 .DivFelexHeader {
     display: flex;
     align-items: center;
-    align-items: center;
-    /* margin-bottom: 36px; */
+    justify-content: center;
+    background-color: white;
+    z-index: 5;
+    width: 100%;
+    text-align: center;
 }
 
 .interactiveTick {
     width: 9px;
+    height: 5px;
     margin: 0;
     padding-left: 6px;
 }
@@ -297,8 +344,27 @@ header {
 .ulNavig {
     display: flex;
     gap: 50px;
-    margin-left: 81px;
+    padding-left: 60px;
+    margin-left: 21px;
     margin-right: 361px;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+}
+
+.buttonSettings {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    border: none;
 }
 
 .aMenu {
@@ -308,6 +374,11 @@ header {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    border: none;
 }
 
 .hello {
@@ -346,7 +417,6 @@ h1 {
 h3 {
     color: #000000;
     font-size: 16px;
-    /* margin: 0 auto; */
     text-align: center;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
@@ -376,7 +446,6 @@ h3 {
     font-style: normal;
     font-size: 12px;
     color: #7E7E7E;
-    /* padding-left: 10px; */
 }
 
 .enterYear::-moz-focus-inner {
@@ -398,7 +467,6 @@ h3 {
 }
 
 .formYear {
-    /* margin-top: 36px; */
     display: flex;
     width: 217px;
     margin-left: 275px;
@@ -475,7 +543,6 @@ h3 {
     box-shadow: 3px 3px 0 rgb(0, 0, 0, 0.25);
     border: none;
     background-color: #D7D7D7;
-    /* color: #7E7E7E; */
 }
 
 .enterNumCulc::placeholder {
@@ -573,7 +640,7 @@ h3 {
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    margin-bottom: 36px;
+    padding-bottom: 36px;
 }
 
 .ourTeam {
@@ -652,7 +719,6 @@ h3 {
 .scientists {
     display: flex;
     margin: 0 auto;
-    /* gap: 59px; */
     flex-wrap: wrap;
     width: 577px;
     row-gap: 36px;
@@ -749,7 +815,6 @@ footer {
     height: 220px;
     background-color: #FFFFFF;
     display: flex;
-    /* align-items: center; */
 }
 
 .logoFooter {
@@ -827,3 +892,11 @@ footer {
 }
 
 */
+
+/* 
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
