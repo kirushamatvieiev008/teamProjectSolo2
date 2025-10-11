@@ -2,18 +2,25 @@ html {
     scroll-behavior: smooth;
 }
 
+input {
+    outline: none;
+}
+
 .menuHeader {
     display: none;
     position: absolute;
-    left: 539px;
-    top: 47px;
+    left: -40px;
+    /* left: 539px;
+    top: 47px; */
     list-style: none;
     width: 160px;
     height: 105px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #FFFFFF;
-    outline: solid 1px rgb(0, 0, 0);
+    /* outline: solid 1px rgb(0, 0, 0); */
+    border: 1px solid black;
+    border-top: none;
     z-index: 2;
 }
 
@@ -26,6 +33,52 @@ html {
 .menuHeader li:hover {
     background-color: #F1F1F1;
 }
+
+.pcVariant1 {
+    display: none;
+    width: 60px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 36px;
+}
+
+.pcVariant2 {
+    display: none;
+    width: 60px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 36px;
+}
+
+.pcVariant3 {
+    display: none;
+    width: 60px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 36px;
+}
+
+.buttonOrderRock {
+    background-color: #00000000;
+    border: none;
+
+    border-radius: 100%;
+}
+
+.buttonOrderScissors {
+    background-color: #00000000;
+    border: none;
+
+    border-radius: 100%;
+}
+
+.buttonOrderPaper {
+    background-color: #00000000;
+    border: none;
+
+    border-radius: 100%;
+}
+
 
 .siteSettingsBtns {
     background-color: #00000000;
@@ -842,6 +895,10 @@ footer {
 
 .ulLinksFoot {
     margin-right: 187px;
+}
+
+.interractiveLi {
+    position: relative;
 }
 
 .inpEmail {

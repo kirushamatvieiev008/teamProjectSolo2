@@ -91,50 +91,50 @@
       </div>
     </div>
     <header>
-    
-        <div class="DivFelexHeader">
-          <!-- <svg>
+      <div class="DivFelexHeader">
+        <!-- <svg>
           <use href=""></use>
         </svg> -->
-          <img
-            class="logoHeader"
-            src="images/header/logoHeader.png"
-            alt="logo"
-          />
-          <nav>
-            <ul class="ulNavig">
-              <li>
-                <button class="buttonSettings">
-                  Інтерактив
-                  <img
-                    class="interactiveTick"
-                    src="images/header/tick.png"
-                    alt="#"
-                  />
-                </button>
-              </li>
-              <li><a class="aMenu" href="#team">Наша команда</a></li>
-              <li><a class="aMenu" href="#footer">Контакти</a></li>
-            </ul>
-          </nav>
-          <button class="sunOrNight">
-            <!-- <svg>
-            <use href=""></use>
-          </svg> -->
-            <img class="sunMoon" src="images/header/sunButton.png" alt="#" />
-          </button>
-          <span class="hello">Вітаємо, User!</span>
-        </div>
-        <ul class="menuHeader">
-          <li>
-            <button class="siteSettingsBtns numberedGames">Числовий</button>
-          </li>
-          <li><button class="siteSettingsBtns playGames">Ігровий</button></li>
-          <li class="lastUlsettings">
-            <button class="siteSettingsBtns smartGames">Ознайомчий</button>
-          </li>
-        </ul>
-      
+        <img class="logoHeader" src="images/header/logoHeader.png" alt="logo" />
+        <nav>
+          <ul class="ulNavig">
+            <li class="interractiveLi">
+              <button class="buttonSettings">
+                Інтерактив
+                <img
+                  class="interactiveTick"
+                  src="images/header/tick.png"
+                  alt="#"
+                />
+              </button>
+              <ul class="menuHeader">
+                <li>
+                  <button class="siteSettingsBtns numberedGames">
+                    Числовий
+                  </button>
+                </li>
+                <li>
+                  <button class="siteSettingsBtns playGames">Ігровий</button>
+                </li>
+                <li class="lastUlsettings">
+                  <button class="siteSettingsBtns smartGames">
+                    Ознайомчий
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li><a class="aMenu" href="#team">Наша команда</a></li>
+            <li><a class="aMenu" href="#footer">Контакти</a></li>
+          </ul>
+        </nav>
+        <button class="sunOrNight">
+          <!-- <svg>
+                <use href=""></use>
+              </svg> -->
+          <img class="sunMoon" src="images/header/sunButton.png" alt="#" />
+        </button>
+        <span class="hello">Вітаємо, User!</span>
+      </div>
     </header>
     <main>
       <div class="container">
@@ -172,7 +172,7 @@
                 id=""
                 placeholder="Введіть число"
               />
-              <button class="lupaBtn" type="submit">
+              <button class="lupaBtn gessNumBtn" type="submit">
                 <img class="luppa" src="./images/main/search.png" alt="#" />
               </button>
             </form>
@@ -187,29 +187,47 @@
           <div class="DivFelex">
             <ul class="game3Ul">
               <li>
-                <img class="imgsGame3" src="./images/main/rock.png" alt="#" />
+                <button class="buttonOrderRock">
+                  <img
+                    class="imgsGame3 imgsGame31"
+                    src="./images/main/rock.png"
+                    alt="#"
+                  />
+                </button>
               </li>
               <li>
-                <img
-                  class="imgsGame3"
+                <button class="buttonOrderScissors">
+                  <img
+                  class="imgsGame3 imgsGame32"
                   src="./images/main/scissors.png"
                   alt="#"
                 />
+                </button>
               </li>
               <li>
-                <img class="imgsGame3" src="./images/main/paper.png" alt="#" />
+                <button class="buttonOrderPaper">
+                  <img
+                  class="imgsGame3 imgsGame33"
+                  src="./images/main/paper.png"
+                  alt="#"
+                />
+                </button>
               </li>
             </ul>
             <div>
               <div class="judge">Рахунок:</div>
               <div class="judge">Комп’ютер - 0</div>
               <div class="judge">Ви - 0</div>
+              <div class="judge">Нічия - 0</div>
             </div>
           </div>
           <div class="congratulations">Ви виграли раунд!</div>
           <button class="checlCPVariant" type="button">
             Варіант комп’ютера
           </button>
+          <img class="pcVariant1" src="./images/main/rock.png" alt="#" />
+          <img class="pcVariant2" src="./images/main/scissors.png" alt="#" />
+          <img class="pcVariant3" src="./images/main/paper.png" alt="#" />
           <div class="line"></div>
         </section>
         <section class="sec4">

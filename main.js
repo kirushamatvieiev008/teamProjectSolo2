@@ -24,19 +24,32 @@ const sec10 = document.querySelector(".sec10");
 const hello = document.querySelector(".hello");
 const sunOrNight = document.querySelector(".sunOrNight");
 const main = body.querySelector("main");
-console.log(main.childElementCount);
+const lupaBtn = body.querySelector(".lupaBtn");
+const enterYearSec1 = body.querySelector(".enterYear");
+const solutionSec1 = body.querySelector(".uBorn");
+const gessNumBtn = document.querySelector(".gessNumBtn");
+const inpSec2 = document.querySelector(".inpSec2");
+const congratulationsSec2 = document.querySelector(".congratulations");
+const imgsGame3 = document.querySelectorAll(".imgsGame3");
+const variantPcGame3 = document.querySelector(".checlCPVariant");
+const pcVar1 = document.querySelector(".pcVariant1");
+const pcVar2 = document.querySelector(".pcVariant2");
+const pcVar3 = document.querySelector(".pcVariant3");
+const userOrderRock = document.querySelector('.buttonOrderRock');
+const userOrderScissors = document.querySelector('.buttonOrderScissors');
+const userOrderPaper = document.querySelector('.buttonOrderPaper');
 
-// const htmlOfHelloBlock = helloBlock.getHTML();
+// console.log(imgsGame3);
 
 applyBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
   if (inpLogIn.value === "") {
     errHeader.style.display = "block";
-    // helloBlock.insertAdjacentHTML('beforeend', '<div class="error">ви не можете бути пустим місцем)</div>');
-    // helloBlock.innerHTML = `${helloBlock.getHTML()} <div class="error">ви не можете бути пустим місцем)</div>`
-    //     if (helloBlock.lastElementChild !== '<div class="error">ви не можете бути пустим місцем)</div>') {
-    //         helloBlock.insertAdjacentHTML('beforeend', '<div class="error">ви не можете бути пустим місцем)</div>');
+    helloBlock.insertAdjacentHTML(
+      "beforeend",
+      '<div class="error">ви не можете бути пустим місцем)</div>'
+    );
   } else {
     helloBlock.style.display = "none";
     thankBlock.style.display = "block";
@@ -100,8 +113,6 @@ const arraySects = [
   },
 ];
 
-// console.log(arraySects.at(-2).name.lastElementChild.classList);
-
 const toSettingPage = (secNums, value) => {
   arraySects.forEach((section) => {
     section.name.style.display = "none";
@@ -119,64 +130,96 @@ const toSettingPage = (secNums, value) => {
 
     arraySects[secNums.at(-1) - 1].name.lastElementChild.remove();
   }
-
-  //   if (arraySects[secNums.at(-1) - 1].name !== arraySects.at(-1)) {
-  //       arraySects[secNums.at(-1) - 1].name.lastElementChild.remove();
-  //   }
-  //   arraySects[secNums.at(-1) - 1].name.style.height = "100%";
 };
 
 numberedGamesBtn.addEventListener("click", (event) => {
-  //   sec1.style.display = "block";
-  //   sec2.style.display = "block";
-  //   sec3.style.display = "none";
-  //   sec4.style.display = "block";
-  //   sec5.style.display = "block";
-  //   sec6.style.display = "none";
-  //   sec7.style.display = "none";
-  //   sec8.style.display = "block";
-  //   sec9.style.display = "none";
-  //   sec10.style.display = "none";
   toSettingPage([1, 2, 4, 5, 8], "block");
 
   settingMenu.style.display = "none";
-  //   sec8.lastElementChild.remove();
 });
 
 playGamesBtn.addEventListener("click", (event) => {
-  //   sec1.style.display = "none";
-  //   sec2.style.display = "none";
-  //   sec3.style.display = "block";
-  //   sec4.style.display = "none";
-  //   sec5.style.display = "none";
-  //   sec6.style.display = "block";
-  //   sec7.style.display = "block";
-  //   sec8.style.display = "none";
-  //   sec9.style.display = "none";
-  //   sec10.style.display = "none";
-
   toSettingPage([3, 6, 7], "block");
   settingMenu.style.display = "none";
-  //   sec7.lastElementChild.remove();
 });
 
 smartGamesBtn.addEventListener("click", (event) => {
-  //   sec1.style.display = "none";
-  //   sec2.style.display = "none";
-  //   sec3.style.display = "none";
-  //   sec4.style.display = "none";
-  //   sec5.style.display = "none";
-  //   sec6.style.display = "none";
-  //   sec7.style.display = "none";
-  //   sec8.style.display = "none";
-  //   sec9.style.display = "block";
-  //   sec10.style.display = "block";
-
   toSettingPage([9, 10], "block");
   settingMenu.style.display = "none";
-  //   sec7.lastElementChild.remove();
 });
 
-// sunOrNight.addEventListener("click", (event) => {
+lupaBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const year = enterYearSec1.value;
+  if (year % 4 === 0) {
+    solutionSec1.textContent = "Ви народилися у високосний рік!";
+    solutionSec1.style.color = "#039900";
+  } else {
+    solutionSec1.textContent = "Ви не народилися у високосний рік(";
+    solutionSec1.style.color = "#ff0000";
+  }
+});
+
+gessNumBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const cpNum = Math.round(Math.random() * (10 - 1) + 1);
+
+  if (inpSec2.value > 10 || inpSec2.value < 1) {
+    congratulationsSec2.textContent =
+      "Ой, напевно ви ввели щось не правильно, це може бути число більше 10 або менше 1, або ж ви ввели число з крапкою";
+  } else {
+    if (cpNum === Number(inpSec2.value)) {
+      congratulationsSec2.textContent = `Вітаю ви вгадали число (${cpNum})`;
+      congratulationsSec2.style.color = "#039900";
+    } else {
+      congratulationsSec2.textContent = `Ви програли, компютер загадав (${cpNum})`;
+      congratulationsSec2.style.color = "#ff0000";
+    }
+  }
+});
+
+// game 3
+
+
+
+// let counterWins = 0;
+// let counterLoses = 0;
+// let counterDraws = 0;
+
+// variantPcGame3.addEventListener("click", (event) => {
 //   event.preventDefault();
+//   const cpOrder = Math.round(Math.random() * (3 - 1) + 1);
+//   if (cpOrder === 1) {
+//     pcVar1.style.display = "block";
+//     pcVar2.style.display = "none";
+//     pcVar3.style.display = "none";
+//   } else if (cpOrder === 2) {
+//     pcVar1.style.display = "none";
+//     pcVar2.style.display = "block";
+//     pcVar3.style.display = "none";
+//   } else {
+//     pcVar1.style.display = "none";
+//     pcVar2.style.display = "none";
+//     pcVar3.style.display = "block";
+//   }
 // });
+
+
+// userOrderRock.addEventListener('click', event => {
+//   event.preventDefault();
+
+// })
+
+
+// сделать каунтеры в глобальном поле зрении, каунтеры нажатых кнопок (ножницы, камень, бумага)
+// написать логику если какаято кнопка была нажата то каунтер + 1
+// если кнопка была нажата то внутри слушателя событий прописать переменную с рандомным числом
+//  а так же проверку что сравнивает между собой числа если число которое загадал человек равно 1 (камень)
+//  то в таком случае если компьютер выбрал число 2, человек выграл победа +=1, если компьютер выбрал число
+//  3 то человек проиграл проигрыш += 1 если компьютер выбрал число 1 то ничья += 1
+// сделать такие дейвствия в каждом слушателе, 
+
+// создать 3 перемены выбор пк1, 3 переменные выбор пк2, в первые три перемены будут плюсаваться
+//  те выборы которые делала пк в первом слушателе во вторые будет перезаписываться, а именно по 
+// умолчания для последних 3 перемен значение 0, и дальше в слушателе от первых перемен будем отнимать 
+// вторые перемены и потом вторые переменые перезаписывать на первые 
