@@ -35,9 +35,12 @@ const variantPcGame3 = document.querySelector(".checlCPVariant");
 const pcVar1 = document.querySelector(".pcVariant1");
 const pcVar2 = document.querySelector(".pcVariant2");
 const pcVar3 = document.querySelector(".pcVariant3");
-const userOrderRock = document.querySelector('.buttonOrderRock');
-const userOrderScissors = document.querySelector('.buttonOrderScissors');
-const userOrderPaper = document.querySelector('.buttonOrderPaper');
+const userOrderRock = document.querySelector(".buttonOrderRock");
+const userOrderScissors = document.querySelector(".buttonOrderScissors");
+const userOrderPaper = document.querySelector(".buttonOrderPaper");
+const cpWins = document.querySelector(".cpWins");
+const yourWins = document.querySelector(".yourWins");
+const draws = document.querySelector(".draws");
 
 // console.log(imgsGame3);
 
@@ -180,8 +183,6 @@ gessNumBtn.addEventListener("click", (event) => {
 
 // game 3
 
-
-
 // let counterWins = 0;
 // let counterLoses = 0;
 // let counterDraws = 0;
@@ -204,12 +205,10 @@ gessNumBtn.addEventListener("click", (event) => {
 //   }
 // });
 
-
 // userOrderRock.addEventListener('click', event => {
 //   event.preventDefault();
 
 // })
-
 
 // сделать каунтеры в глобальном поле зрении, каунтеры нажатых кнопок (ножницы, камень, бумага)
 // написать логику если какаято кнопка была нажата то каунтер + 1
@@ -217,9 +216,101 @@ gessNumBtn.addEventListener("click", (event) => {
 //  а так же проверку что сравнивает между собой числа если число которое загадал человек равно 1 (камень)
 //  то в таком случае если компьютер выбрал число 2, человек выграл победа +=1, если компьютер выбрал число
 //  3 то человек проиграл проигрыш += 1 если компьютер выбрал число 1 то ничья += 1
-// сделать такие дейвствия в каждом слушателе, 
+// сделать такие дейвствия в каждом слушателе,
 
 // создать 3 перемены выбор пк1, 3 переменные выбор пк2, в первые три перемены будут плюсаваться
-//  те выборы которые делала пк в первом слушателе во вторые будет перезаписываться, а именно по 
-// умолчания для последних 3 перемен значение 0, и дальше в слушателе от первых перемен будем отнимать 
-// вторые перемены и потом вторые переменые перезаписывать на первые 
+//  те выборы которые делал пк в первом слушателе во вторые будет перезаписываться, а именно по
+// умолчания для последних 3 перемен значение 0, и дальше в слушателе от первых перемен будем отнимать
+// вторые перемены и потом вторые переменые перезаписывать на первые
+
+let rock1 = 0;
+let scissors1 = 0;
+let paper1 = 0;
+
+let rock2 = 0;
+let scissors2 = 0;
+let paper2 = 0;
+
+let pcCounterListenerWins11 = 0;
+let pcCounterListenerLoses12 = 0;
+let pcCounterListenerDraw13 = 0;
+
+userOrderRock.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const pcOrder = Math.round(Math.random() * (3 - 1) + 1);
+  if (pcOrder === 1) {
+    rock1 += 1;
+    pcCounterListenerDraw13 += 1;
+  } else if (pcOrder === 2) {
+    scissors1 += 1;
+    pcCounterListenerWins11 += 1;
+  } else {
+    paper1 += 1;
+    pcCounterListenerLoses12 += 1;
+  }
+
+  cpWins.textContent = `Комп’ютер - ${pcCounterListenerLoses12}`;
+  yourWins.textContent = `Ви - ${pcCounterListenerWins11}`;
+  draws.textContent = `Нічия - ${pcCounterListenerDraw13}`;
+});
+
+userOrderScissors.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const pcOrder = Math.round(Math.random() * (3 - 1) + 1);
+  if (pcOrder === 1) {
+    rock1 += 1;
+    pcCounterListenerLoses12 += 1;
+  } else if (pcOrder === 2) {
+    scissors1 += 1;
+    pcCounterListenerDraw13 += 1;
+  } else {
+    paper1 += 1;
+    pcCounterListenerWins11 += 1;
+  }
+  cpWins.textContent = `Комп’ютер - ${pcCounterListenerLoses12}`;
+  yourWins.textContent = `Ви - ${pcCounterListenerWins11}`;
+  draws.textContent = `Нічия - ${pcCounterListenerDraw13}`;
+});
+
+userOrderPaper.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const pcOrder = Math.round(Math.random() * (3 - 1) + 1);
+  if (pcOrder === 1) {
+    rock1 += 1;
+    pcCounterListenerWins11 += 1;
+  } else if (pcOrder === 2) {
+    scissors1 += 1;
+    pcCounterListenerLoses12 += 1;
+  } else {
+    paper1 += 1;
+    pcCounterListenerDraw13 += 1;
+  }
+  cpWins.textContent = `Комп’ютер - ${pcCounterListenerLoses12}`;
+  yourWins.textContent = `Ви - ${pcCounterListenerWins11}`;
+  draws.textContent = `Нічия - ${pcCounterListenerDraw13}`;
+});
+
+variantPcGame3.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (rock1 - rock2 !== 0 || scissors1 - scissors2 !== 0 || paper1 - paper2 !== 0) {
+    if (rock1 - rock2 !== 0) {
+    pcVar1.style.display = "block";
+    pcVar2.style.display = "none";
+    pcVar3.style.display = "none";
+    rock2 = rock1;
+  } else if (scissors1 - scissors2 !== 0) {
+    pcVar1.style.display = "none";
+    pcVar2.style.display = "block";
+    pcVar3.style.display = "none";
+    scissors2 = scissors1;
+  } else {
+    pcVar1.style.display = "none";
+    pcVar2.style.display = "none";
+    pcVar3.style.display = "block";
+    paper2 = paper1
+  }
+  }
+});
