@@ -35,9 +35,13 @@ input[type="number"]:focus {
     z-index: 2;
 }
 
-.plus {
-    cursor:not-allowed;
-}
+/* .plus {
+    
+} */
+
+/* .indexCulc {
+    cursor: not-allowed;
+} */
 
 .result {
     width: 118px;

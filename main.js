@@ -41,8 +41,17 @@ const userOrderPaper = document.querySelector(".buttonOrderPaper");
 const cpWins = document.querySelector(".cpWins");
 const yourWins = document.querySelector(".yourWins");
 const draws = document.querySelector(".draws");
+const indexCulc = document.querySelector(".indexCulc");
+const inputFirstNum = document.querySelector(".enterNumCulc1");
+const inputSecondNum = document.querySelector(".enterNumCulc2");
+const formCulc = document.querySelector(".gameCulc");
+const equalBtn = document.querySelector(".equal");
+const result = document.querySelector(".result");
 
-// console.log(imgsGame3);
+const plusBtn = document.querySelector(".plus");
+const uToBtn = document.querySelector(".upTo");
+const minusBtn = document.querySelector(".minus");
+const slashBtn = document.querySelector(".slash");
 
 applyBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -295,22 +304,112 @@ userOrderPaper.addEventListener("click", (event) => {
 
 variantPcGame3.addEventListener("click", (event) => {
   event.preventDefault();
-  if (rock1 - rock2 !== 0 || scissors1 - scissors2 !== 0 || paper1 - paper2 !== 0) {
+  if (
+    rock1 - rock2 !== 0 ||
+    scissors1 - scissors2 !== 0 ||
+    paper1 - paper2 !== 0
+  ) {
     if (rock1 - rock2 !== 0) {
-    pcVar1.style.display = "block";
-    pcVar2.style.display = "none";
-    pcVar3.style.display = "none";
-    rock2 = rock1;
-  } else if (scissors1 - scissors2 !== 0) {
-    pcVar1.style.display = "none";
-    pcVar2.style.display = "block";
-    pcVar3.style.display = "none";
-    scissors2 = scissors1;
-  } else {
-    pcVar1.style.display = "none";
-    pcVar2.style.display = "none";
-    pcVar3.style.display = "block";
-    paper2 = paper1
+      pcVar1.style.display = "block";
+      pcVar2.style.display = "none";
+      pcVar3.style.display = "none";
+      rock2 = rock1;
+    } else if (scissors1 - scissors2 !== 0) {
+      pcVar1.style.display = "none";
+      pcVar2.style.display = "block";
+      pcVar3.style.display = "none";
+      scissors2 = scissors1;
+    } else {
+      pcVar1.style.display = "none";
+      pcVar2.style.display = "none";
+      pcVar3.style.display = "block";
+      paper2 = paper1;
+    }
   }
+});
+
+let plus = false;
+let minus = false;
+let up = false;
+let slash = false;
+
+plusBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  plus = true;
+  minus = false;
+  up = false;
+  slash = false;
+
+  plusBtn.style.opacity = "1";
+  uToBtn.style.opacity = "0.25";
+  minusBtn.style.opacity = "0.25";
+  slashBtn.style.opacity = "0.25";
+});
+
+uToBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  plus = false;
+  minus = false;
+  up = true;
+  slash = false;
+
+  plusBtn.style.opacity = "0.25";
+  uToBtn.style.opacity = "1";
+  minusBtn.style.opacity = "0.25";
+  slashBtn.style.opacity = "0.25";
+});
+
+minusBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  plus = false;
+  minus = true;
+  up = false;
+  slash = false;
+
+  plusBtn.style.opacity = "0.25";
+  uToBtn.style.opacity = "0.25";
+  minusBtn.style.opacity = "1";
+  slashBtn.style.opacity = "0.25";
+});
+
+slashBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  plus = false;
+  minus = false;
+  up = false;
+  slash = true;
+
+  plusBtn.style.opacity = "0.25";
+  uToBtn.style.opacity = "0.25";
+  minusBtn.style.opacity = "0.25";
+  slashBtn.style.opacity = "1";
+});
+
+equalBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  const firstNum = inputFirstNum.value;
+  const secondNum = inputSecondNum.value;
+  if (plus) {
+    result.textContent = Number(firstNum) + Number(secondNum);
+    console.log(firstNum + secondNum);
+  } else if (minus) {
+    result.textContent = Number(firstNum) - Number(secondNum);
+    console.log(firstNum - secondNum);
+  } else if (up) {
+    result.textContent = Number(firstNum) * Number(secondNum);
+    console.log(firstNum * secondNum);
+  } else if (slash) {
+    result.textContent = Number(firstNum) / Number(secondNum);
+    console.log(firstNum / secondNum);
   }
+
+  plus = false;
+  minus = false;
+  up = false;
+  slash = false;
+
+  plusBtn.style.opacity = "1";
+  uToBtn.style.opacity = "1";
+  minusBtn.style.opacity = "1";
+  slashBtn.style.opacity = "1";
 });
