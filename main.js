@@ -391,16 +391,16 @@ equalBtn.addEventListener("click", (event) => {
   const secondNum = inputSecondNum.value;
   if (plus) {
     result.textContent = Number(firstNum) + Number(secondNum);
-    console.log(firstNum + secondNum);
+    // console.log(firstNum + secondNum);
   } else if (minus) {
     result.textContent = Number(firstNum) - Number(secondNum);
-    console.log(firstNum - secondNum);
+    // console.log(firstNum - secondNum);
   } else if (up) {
     result.textContent = Number(firstNum) * Number(secondNum);
-    console.log(firstNum * secondNum);
+    // console.log(firstNum * secondNum);
   } else if (slash) {
     result.textContent = Number(firstNum) / Number(secondNum);
-    console.log(firstNum / secondNum);
+    // console.log(firstNum / secondNum);
   }
 
   plus = false;
@@ -413,3 +413,274 @@ equalBtn.addEventListener("click", (event) => {
   minusBtn.style.opacity = "1";
   slashBtn.style.opacity = "1";
 });
+
+// const gallery = document.querySelector(".gallery");
+// const nextBtn = document.querySelector(".next");
+// const previousBtn = document.querySelector(".previous");
+// const totalLi = galarySlider.childElementCount;
+
+const galarySlider = document.querySelector(".galarySlider");
+const leftBtnSlider = document.querySelector(".leftBtn");
+const rightBtnSlider = document.querySelector(".rightBtn");
+const lis = galarySlider.children;
+const totalPhotos = galarySlider.childElementCount;
+const liPhotosAllSlider = document.querySelectorAll(".liphotoAll");
+
+const buttonAll = document.querySelectorAll(".navPhoto");
+
+galarySlider.firstElementChild.style.display = "block";
+
+const funcSlider = (index, value) => {
+  let count = 0;
+  liPhotosAllSlider.forEach((liImg) => {
+    liImg.style.display = "none";
+    // divAll[count].classList.add('photoLink');
+    // divAll[count].classList.remove('photoLink');
+    count += 1;
+  });
+  liPhotosAllSlider[index].style.display = value;
+  // divAll.classList.remove('orderedPhoto');
+  // console.log(index);
+};
+let counterForward = 0;
+rightBtnSlider.addEventListener("click", (event) => {
+  event.preventDefault();
+  counterForward += 1;
+  if (counterForward === liPhotosAllSlider.length) {
+    counterForward = 0;
+    buttonAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[liPhotosAllSlider.length - 1].classList.remove("orderedPhoto");
+  }
+  if (counterForward > 0 && counterForward < liPhotosAllSlider.length) {
+    buttonAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[counterForward - 1].classList.remove("orderedPhoto");
+  }
+  funcSlider(counterForward, "block");
+});
+
+leftBtnSlider.addEventListener("click", (event) => {
+  event.preventDefault();
+  counterForward -= 1;
+  // divAll[counterForward].classList.add("orderedPhoto");
+  // divAll[counterForward + 1].classList.remove("orderedPhoto");
+  if (counterForward === -1) {
+    counterForward = liPhotosAllSlider.length - 1;
+    // divAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[0].classList.remove("orderedPhoto");
+  }
+  if (counterForward > 0 && counterForward < liPhotosAllSlider.length - 1) {
+    buttonAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[counterForward + 1].classList.remove("orderedPhoto");
+  }
+  if (counterForward === liPhotosAllSlider.length - 1) {
+    buttonAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[0].classList.remove("orderedPhoto");
+  }
+  if (counterForward === 0) {
+    buttonAll[counterForward].classList.add("orderedPhoto");
+    buttonAll[counterForward + 1].classList.remove("orderedPhoto");
+  }
+  funcSlider(counterForward, "block");
+});
+
+// console.log(liPhotosAllSlider.length);
+
+const funcButtonClick = (buttons, numOfBtn) => {
+  buttons.forEach((button) => {
+    button.classList.remove("orderedPhoto");
+  });
+
+  buttonAll[numOfBtn].classList.add("orderedPhoto");
+    funcSlider(counterForward, "block");
+};
+
+sec9.addEventListener("click", (event) => {
+  event.preventDefault();
+  // console.log(event.target.classList);
+
+  if (event.target.classList[1] === "navPhoto1") {
+    counterForward = 0;
+    funcButtonClick(buttonAll, counterForward);
+
+    // console.log('it is nac 1 photo!');
+    // buttonAll[counterForward].classList.add("orderedPhoto");
+  } else if (event.target.classList[1] === "navPhoto2") {
+    // console.log('it is not');
+    counterForward = 1;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto3") {
+    // console.log('it is not');
+    counterForward = 2;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto4") {
+    // console.log('it is not');
+    counterForward = 3;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto5") {
+    // console.log('it is not');
+    counterForward = 4;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto6") {
+    // console.log('it is not');
+    counterForward = 5;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto7") {
+    // consolcounterForward = 0;e.log('it is not');
+    counterForward = 6;
+    funcButtonClick(buttonAll, counterForward);
+  } else if (event.target.classList[1] === "navPhoto8") {
+    // console.log('it is not');
+    counterForward = 7;
+    funcButtonClick(buttonAll, counterForward);
+  }
+});
+
+// let counterForward = 1;
+// // let counterBack = counterForward - 1;
+
+// rightBtnSlider.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   // lis[counterForward].style.display = "block";
+//   // lis[counterForward - 1].style.display = "none";
+//   // lis[totalPhotos - 1].style.display = "none";
+//   console.log("no check listener 1");
+
+//   if (counterForward > 0 && counterForward < 7) {
+//     console.log('if 1');
+//     lis[0].style.display = "none";
+//   counterForward += 1;
+//     lis[counterForward].style.display = "block";
+//     lis[counterForward - 1].style.display = "none";
+//   }
+//   // counterForward += 1;
+
+//   if (counterForward === lis.length - 1) {
+//     console.log('if2');
+//     counterForward = 0;
+
+//     lis[counterForward].style.display = "block";
+//     lis[lis.length - 1].style.display = "none";
+
+//   }
+
+// });
+
+// galarySlider.firstElementChild.style.display = "block";
+// let counter = 2;
+// let counterBack;
+// const liLast = document.querySelector(`.liPhoto${totalPhotos}`);
+
+// rightBtnSlider.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const liAcc = document.querySelector(`.liPhoto${counter}`);
+//   const previousLi = document.querySelector(`.liPhoto${counter - 1}`);
+//   liLast.style.display = "none";
+//   if (counter === 1) {
+//     console.log("if right", counter);
+
+//     liAcc.style.display = "block";
+//     liLast.style.display = "none";
+//   } else if (counter === totalPhotos) {
+//     liAcc.style.display = "block";
+//     previousLi.style.display = "none";
+//     // console.log('else if sec', counter);
+//     // console.log(counter, 'last else if right');
+//     counter = 0;
+//     counterBack = totalPhotos;
+//   } else if (counter > 1) {
+//     console.log("else if right", counter);
+
+//     previousLi.style.display = "none";
+//     liAcc.style.display = "block";
+//   }
+//   // if (counter === totalPhotos) {
+//   //   console.log('if2 right', counter);
+
+//   //   // liAcc.style.display = "block";
+//   //   // previousLi.style.display = "none";
+//   // }
+//   counter += 1;
+//   counterBack = counter - 1;
+//   // else if (counterBack === 0) {
+//   //   counterBack = totalPhotos;
+//   // }
+// });
+
+// // console.log(liLast);
+
+// leftBtnSlider.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const liAcc = document.querySelector(`.liPhoto${counterBack}`);
+//   const previousLi = document.querySelector(`.liPhoto${counter}`);
+//   counter -= 1;
+//   // liLast.style.display = "none";
+//   if (counterBack === 1) {
+//     console.log("smth2");
+
+//     // console.log("if right", counter);
+//     liAcc.style.display = "block";
+//     previousLi.style.display = "none";
+//   } else if (counterBack === 0) {
+//     console.log("smth2");
+//     counterBack = totalPhotos;
+//     liAcc.style.display = "block";
+//     galarySlider.firstElementChild.style.display = "none";
+//         // counter - 1;
+//   } else if (counterBack > 0) {
+//     console.log("smth2", counterBack);
+//     liAcc.style.display = "block";
+//     previousLi.style.display = "none";
+//     counter - 1;
+//   }
+
+// counterBack -= 1;
+// else if (counter === totalPhotos) {
+//   liAcc.style.display = "block";
+//   previousLi.style.display = "none";
+//   // console.log('else if sec', counter);
+//   // console.log(counter, 'last else if right');
+//   counter = 0;
+//   counterBack = totalPhotos;
+// } else if (counter > 1) {
+//   console.log("else if right", counter);
+
+//   previousLi.style.display = "none";
+//   liAcc.style.display = "block";
+// }
+// if (counter === totalPhotos) {
+//   console.log('if2 right', counter);
+
+//   // liAcc.style.display = "block";
+//   // previousLi.style.display = "none";
+// }
+// counter += 1;
+// counterBack = counter - 1;
+
+// counter -= 1;
+// const liBefore = document.querySelector(`.liPhoto${counter}`);
+// const liAcc = document.querySelector(`.liPhoto${counterBack}`);
+// // liAcc.style.display = "block";
+// // liBefore.style.display = 'none';
+// if (counterBack === 0) {
+//   console.log("if back");
+
+//   counterBack = totalPhotos;
+//   liAcc.style.display = "block";
+//   liBefore.style.display = "none";
+// } else if (counterBack === 1) {
+//   console.log("else if back");
+
+//   counter = 1;
+//   counterBack = totalPhotos;
+//   galarySlider.firstElementChild.style.display = "none";
+//   liLast.style.display = "block";
+// } else if (counterBack > 1) {
+//   liAcc.style.display = "block";
+//   // liBefore.style.display = "none";
+// }
+// // liBefore.style.display = "none";
+// if (counter === 0) {
+//   counter = totalPhotos;
+// }
+// counterBack -= 1;
+// });
