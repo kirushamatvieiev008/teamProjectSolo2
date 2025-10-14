@@ -491,7 +491,7 @@ const funcButtonClick = (buttons, numOfBtn) => {
   });
 
   buttonAll[numOfBtn].classList.add("orderedPhoto");
-    funcSlider(counterForward, "block");
+  funcSlider(counterForward, "block");
 };
 
 sec9.addEventListener("click", (event) => {
@@ -534,6 +534,40 @@ sec9.addEventListener("click", (event) => {
     funcButtonClick(buttonAll, counterForward);
   }
 });
+
+const theLargestAlert = document.querySelector(".theLargest");
+const comppareNums = document.querySelectorAll(".bigNums");
+
+let maxNum = [];
+comppareNums[0].addEventListener("blur", (event) => {
+  event.preventDefault();
+  maxNum[0] = comppareNums[0].value;
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
+
+});
+
+comppareNums[1].addEventListener("blur", (event) => {
+  event.preventDefault();
+  maxNum[1] = comppareNums[1].value;
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
+
+});
+
+comppareNums[2].addEventListener("blur", (event) => {
+  event.preventDefault();
+  maxNum[2] = comppareNums[2].value;
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
+
+});
+
+// console.log(inutsBiggestNum);
+
+// inutsBiggestNum[2].addEventListener('click', event => {
+//   event.preventDefault();
+
+//   console.log('it works');
+
+// })
 
 // let counterForward = 1;
 // // let counterBack = counterForward - 1;
