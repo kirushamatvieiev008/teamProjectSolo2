@@ -542,22 +542,266 @@ let maxNum = [];
 comppareNums[0].addEventListener("blur", (event) => {
   event.preventDefault();
   maxNum[0] = comppareNums[0].value;
-  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
-
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(
+    ...maxNum
+  )}`;
 });
 
 comppareNums[1].addEventListener("blur", (event) => {
   event.preventDefault();
   maxNum[1] = comppareNums[1].value;
-  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
-
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(
+    ...maxNum
+  )}`;
 });
 
 comppareNums[2].addEventListener("blur", (event) => {
   event.preventDefault();
   maxNum[2] = comppareNums[2].value;
-  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(...maxNum)}`;
+  theLargestAlert.textContent = `Найбільше число, яке ви ввели - ${Math.max(
+    ...maxNum
+  )}`;
+});
 
+const time = document.querySelector(".time");
+const inputTime = document.querySelector(".numberCulcTime");
+const lupaTime = document.querySelector(".lupaTime");
+
+lupaTime.addEventListener("click", (event) => {
+  event.preventDefault();
+  let result;
+  let month = 0;
+  let years = 0;
+  let days = 0;
+  const allMinutes = inputTime.value;
+  let hours = parseInt(inputTime.value / 60);
+  let minutes = allMinutes - hours * 60;
+  if (allMinutes < 60) {
+    minutes = allMinutes;
+    result = `minutes ${minutes}`;
+  }
+  if (allMinutes > 60) {
+    hours = parseInt(allMinutes / 60);
+    minutes = allMinutes - hours * 60;
+    result = `hours: ${hours}, minutes: ${minutes}`;
+  }
+  if (hours > 23) {
+    days = parseInt(hours / 24);
+    hours = hours - days * 24;
+    result = `days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+  }
+  if (days > 30) {
+    month = parseInt(days / 30);
+    days = days - month * 30;
+    result = `months: ${month}, days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+  }
+  if (month > 12) {
+    years = parseInt(month / 12);
+    month = month - years * 12;
+    result = `years: ${years}, months: ${month}, days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+  }
+
+  time.textContent = result;
+
+  // console.log(`hours: ${parseInt(inputTime.value / 60)}`);
+});
+
+const categoriesUl = document.querySelector(".categoriesUl");
+const scientistsLi = document.querySelectorAll(".scientistsLi");
+const scientistsImages = document.querySelectorAll(".scientistImages");
+
+const scientists = [
+  {
+    name: "Albert",
+    surname: "Einstein",
+    born: 1879,
+    dead: 1955,
+    id: 1,
+    link: "images/main/scientists/einstain.webp",
+  },
+  {
+    name: "Isaac",
+    surname: "Newton",
+    born: 1643,
+    dead: 1727,
+    id: 2,
+    link: "images/main/scientists/newton.webp",
+  },
+  {
+    name: "Galileo",
+    surname: "Galilei",
+    born: 1564,
+    dead: 1642,
+    id: 3,
+    link: "images/main/scientists/galileo.webp",
+  },
+  {
+    name: "Marie",
+    surname: "Curie",
+    born: 1867,
+    dead: 1934,
+    id: 4,
+    link: "images/main/scientists/mariaCurie.webp",
+  },
+  {
+    name: "Johannes",
+    surname: "Kepler",
+    born: 1571,
+    dead: 1630,
+    id: 5,
+    link: "images/main/scientists/keler.webp",
+  },
+  {
+    name: "Nicolaus",
+    surname: "Copernicus",
+    born: 1473,
+    dead: 1543,
+    id: 6,
+    link: "images/main/scientists/nicolasCopernicus.webp",
+  },
+  {
+    name: "Max",
+    surname: "Planck",
+    born: 1858,
+    dead: 1947,
+    id: 7,
+    link: "images/main/scientists/maxlanck.webp",
+  },
+  {
+    name: "Katherine",
+    surname: "Blodgett",
+    born: 1898,
+    dead: 1979,
+    id: 8,
+    link: "images/main/scientists/kathrineBlodgett.webp",
+  },
+  {
+    name: "Ada",
+    surname: "Lovelace",
+    born: 1815,
+    dead: 1852,
+    id: 9,
+    link: "images/main/scientists/adaLovelace.webp",
+  },
+  {
+    name: "Sarah E.",
+    surname: "Goode",
+    born: 1855,
+    dead: 1905,
+    id: 10,
+    link: "images/main/scientists/sarahEGoode.webp",
+  },
+  {
+    name: "Lise",
+    surname: "Meitner",
+    born: 1878,
+    dead: 1968,
+    id: 11,
+    link: "images/main/scientists/liseMeitner.webp",
+  },
+  {
+    name: "Hanna",
+    surname: "Hammarström",
+    born: 1829,
+    dead: 1909,
+    id: 12,
+    link: "images/main/scientists/HannaHammarström.jpg",
+  },
+];
+
+// const funcScientists = (check, value) => {
+//   scientistsImages.forEach(scientist => {
+//     scientist.style.display = 'none';
+//   });
+
+//   scientistsImages.forEach(scientist => {
+//     if (check) {
+//       scientistsImages[scientists.indexOf(scientist)].style.display = value;
+//     }
+//   });
+
+// };
+
+const scientistsUl = document.querySelector(".scientists");
+
+sec10.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  console.log(event.target.classList);
+
+  if (event.target.classList[1] === "nineteenCentuty") {
+    scientists.forEach((scientist) => {
+      scientistsLi[scientists.indexOf(scientist)].style.display = "none";
+    });
+    scientists.forEach((scientist) => {
+      if (scientist.born < 1901 && scientist.born > 1800) {
+        scientistsLi[scientists.indexOf(scientist)].style.display = "block";
+      }
+    });
+  } else if (event.target.classList[1] === "einshtein") {
+    scientistsUl.innerHTML = `<li class="scientistsLiClicked">
+              <img
+                class="scientistImagesClickedEinstain"
+                src="./images/main/scientists/einstain.webp"
+                alt="#"
+              />
+              <p class="descriptionEinstain">
+                Альбе́рт Ейнштейн - 14 березня 1879, Ульм, королівство Вюртемберг,
+                Німецька імперія — 18 квітня 1955, Принстон, штат Нью-Джерсі,
+                США — американський, німецький та швейцарський фізик-теоретик
+                єврейського походження, один із найвизначніших науковців XX
+                століття, творець теорії відносності та один із творців
+                квантової механіки. Його формулу еквівалентності маси й енергії
+                E = mc2, яка випливає зі спеціальної теорії відносності,
+                вважають «найвідомішим рівнянням у світі». Лауреат Нобелівської
+                премії з фізики (1921) за «заслуги в галузі теоретичної фізики,
+                і зокрема за відкриття закону фотоелектричного ефекту».
+              </p>
+            </li>`;
+  } else if (event.target.classList[1] === "alfabet") {
+    let arrScientists = [];
+    let arrayImgsLis = [];
+
+    scientists.forEach((scientist) => {
+      arrScientists.push(scientist.name);
+    });
+    arrScientists.sort();
+
+    arrScientists.forEach((name) => {
+      scientists.forEach((scientistInArr) => {
+        if (name === scientistInArr.name) {
+          arrayImgsLis.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientistInArr.link}"
+                alt="#"
+              />
+            </li>`);
+        }
+      });
+    });
+    scientistsUl.innerHTML = arrayImgsLis.join("");
+  } else if (event.target.classList[1] === "leterS") {
+    const arrLisWithS = [];
+    scientists.forEach((scientistArr) => {
+      const lowercased = scientistArr.name.toLowerCase();
+      const nameArr = lowercased.split("");
+      if (nameArr[0] === "s") {
+        console.log("letter s!");
+
+        arrLisWithS.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientistArr.link}"
+                alt="#"
+              />
+            </li>`);
+      }
+      console.log(arrLisWithS.join(""));
+
+      scientistsUl.innerHTML = arrLisWithS.join("");
+    });
+  } 
 });
 
 // console.log(inutsBiggestNum);
