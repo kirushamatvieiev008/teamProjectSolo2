@@ -47,11 +47,14 @@ const inputSecondNum = document.querySelector(".enterNumCulc2");
 const formCulc = document.querySelector(".gameCulc");
 const equalBtn = document.querySelector(".equal");
 const result = document.querySelector(".result");
-
 const plusBtn = document.querySelector(".plus");
 const uToBtn = document.querySelector(".upTo");
 const minusBtn = document.querySelector(".minus");
 const slashBtn = document.querySelector(".slash");
+const container = document.querySelector(".container");
+const moonType = document.querySelector(".moonType");
+const divBlur = document.querySelector(".blur");
+const footer = document.querySelector('footer');
 
 applyBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -71,13 +74,13 @@ applyBtn.addEventListener("click", (event) => {
 close.addEventListener("click", (event) => {
   event.preventDefault();
   helloBlock.style.display = "none";
-  body.firstElementChild.style.display = "none";
+  divBlur.style.display = "none";
   body.classList.remove("noscroll");
 });
 
 closeThanksBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  body.firstElementChild.style.display = "none";
+  divBlur.style.display = "none";
   hello.textContent = `Вітаємо, ${inpLogIn.value}`;
   body.classList.remove("noscroll");
 });
@@ -730,13 +733,19 @@ sec10.addEventListener("click", (event) => {
   console.log(event.target.classList);
 
   if (event.target.classList[1] === "nineteenCentuty") {
-    scientists.forEach((scientist) => {
-      scientistsLi[scientists.indexOf(scientist)].style.display = "none";
-    });
+    let scientistsArray = [];
     scientists.forEach((scientist) => {
       if (scientist.born < 1901 && scientist.born > 1800) {
-        scientistsLi[scientists.indexOf(scientist)].style.display = "block";
+        // scientistsLi[scientists.indexOf(scientist)].style.display = "block";
+        scientistsArray.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientist.link}"
+                alt="#"
+              />
+            </li>`);
       }
+      scientistsUl.innerHTML = scientistsArray.join("");
     });
   } else if (event.target.classList[1] === "einshtein") {
     scientistsUl.innerHTML = `<li class="scientistsLiClicked">
@@ -836,14 +845,22 @@ sec10.addEventListener("click", (event) => {
 
     scientistsUl.innerHTML = arrayHtmlInner.join("");
   } else if (event.target.classList[1] === "dectroyA") {
+    let scientistsArr = [];
     scientists.forEach((scientistArr) => {
       let splitedName = scientistArr.name.toLowerCase().split("");
       console.log(splitedName);
 
-      if (splitedName[0] === "a") {
-        scientistsLi[scientistArr.id - 1].style.display = "none";
+      if (splitedName[0] !== "a") {
+        scientistsArr.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientistArr.link}"
+                alt="#"
+              />
+            </li>`);
       }
     });
+    scientistsUl.innerHTML = scientistsArr.join("");
   } else if (event.target.classList[1] === "laterScietist") {
     let maxYear = 0;
 

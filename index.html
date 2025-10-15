@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="noscroll">
+    <!-- <div class="moonType"></div> -->
     <div class="blur">
       <div class="helloBlock">
         <button class="close">
@@ -47,7 +48,8 @@
         <p class="introtext">
           Привіт! <br />
           Ви потрапили на сайт інтерактивних ігор та завдань <br />
-          Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br />
+          Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+          <br />
           Бажаємо Вам гарно провести час!
         </p>
         <span class="enterName">Введіть своє ім’я:</span>
@@ -92,9 +94,6 @@
     </div>
     <header>
       <div class="DivFelexHeader">
-        <!-- <svg>
-          <use href=""></use>
-        </svg> -->
         <img class="logoHeader" src="images/header/logoHeader.png" alt="logo" />
         <nav>
           <ul class="ulNavig">
@@ -128,9 +127,6 @@
           </ul>
         </nav>
         <button class="sunOrNight">
-          <!-- <svg>
-                <use href=""></use>
-              </svg> -->
           <img class="sunMoon" src="images/header/sunButton.png" alt="#" />
         </button>
         <span class="hello">Вітаємо, User!</span>
@@ -240,8 +236,12 @@
                 placeholder="Введіть число"
               />
               <ul class="ulCulc">
-                <li><button class="indexCulc plus" type="button">+</button></li>
-                <li><button class="indexCulc upTo" type="button">*</button></li>
+                <li>
+                  <button class="indexCulc plus" type="button">+</button>
+                </li>
+                <li>
+                  <button class="indexCulc upTo" type="button">*</button>
+                </li>
                 <li>
                   <button class="indexCulc minus" type="button">-</button>
                 </li>
@@ -322,7 +322,6 @@
             </button>
             <ul class="galarySlider">
               <li class="liPhoto1 liphotoAll">
-                <!-- <div class="imgsSlider">1</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto1.jpg"
@@ -330,7 +329,6 @@
                 />
               </li>
               <li class="liPhoto2 liphotoAll">
-                <!-- <div class="imgsSlider">2</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto2.jpg"
@@ -338,7 +336,6 @@
                 />
               </li>
               <li class="liPhoto3 liphotoAll">
-                <!-- <div class="imgsSlider">3</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto3.jpg"
@@ -346,7 +343,6 @@
                 />
               </li>
               <li class="liPhoto4 liphotoAll">
-                <!-- <div class="imgsSlider">4</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto4.jpg"
@@ -354,7 +350,6 @@
                 />
               </li>
               <li class="liPhoto5 liphotoAll">
-                <!-- <div class="imgsSlider">5</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto5.jpg"
@@ -362,7 +357,6 @@
                 />
               </li>
               <li class="liPhoto6 liphotoAll">
-                <!-- <div class="imgsSlider">6</div> -->
                 <img
                   class="imgsSliderReal"
                   src="images/main/myPhoto6.jpg"
@@ -404,26 +398,6 @@
         <section class="sec10">
           <h3>Обери вченого/их</h3>
           <ul class="scientists">
-            <!-- <li class="scientistsLiClicked">
-              <img
-                class="scientistImagesClickedEinstain"
-                src="./images/main/scientists/einstain.webp"
-                alt="#"
-              />
-              <p class="descriptionEinstain">
-                Альбе́рт Ейнштейн - 14 березня 1879, Ульм, королівство Вюртемберг,
-                Німецька імперія — 18 квітня 1955, Принстон, штат Нью-Джерсі,
-                США — американський, німецький та швейцарський фізик-теоретик
-                єврейського походження, один із найвизначніших науковців XX
-                століття, творець теорії відносності та один із творців
-                квантової механіки. Його формулу еквівалентності маси й енергії
-                E = mc2, яка випливає зі спеціальної теорії відносності,
-                вважають «найвідомішим рівнянням у світі». Лауреат Нобелівської
-                премії з фізики (1921) за «заслуги в галузі теоретичної фізики,
-                і зокрема за відкриття закону фотоелектричного ефекту».
-              </p>
-            </li> -->
-
             <li class="scientistsLi">
               <img
                 class="scientistImages"
@@ -563,9 +537,6 @@
     <footer id="footer">
       <div class="container">
         <div class="footerFlex">
-          <!-- <svg>
-        <use href=""></use>
-      </svg> -->
           <img
             class="logoFooter"
             src="./images/footer/logoFooter.png"
@@ -580,7 +551,9 @@
             </li>
             <li><a class="linksFooter" href="#">Facebook: CodingMagic</a></li>
             <li><a class="linksFooter" href="#">Twitter: CodingMagic</a></li>
-            <li><a class="linksFooter" href="#">Instagram: CodingMagic</a></li>
+            <li>
+              <a class="linksFooter" href="#">Instagram: CodingMagic</a>
+            </li>
           </ul>
           <div class="forNotification">
             <form class="formFoot" action="">
