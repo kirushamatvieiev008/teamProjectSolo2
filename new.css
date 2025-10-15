@@ -1,55 +1,101 @@
-/* .bodyCircle {
+/* .toHover {
+    overflow: hidden; */
+/* animation-name: footbalPechAnim;
+    animation-duration: 2s;
+    animation-direction: reverse; */
+/* }
+
+.divBody {
+    width: 720px;
+    height: 500px;
     position: relative;
-    width: 1000px;
-    margin: 0 auto;
-    background-color: #5ABB58;
-    margin-top: 300px;
-    height: 200px;
+} */
+
+/* .section { */
+/* width: 720px; */
+/* height: 500px;
+    background-image: url(Gemini_Generated_Image_2foh6a2foh6a2foh.png);
+    width: 3500px;
+    position: absolute;
+    top: 0;
+    left: 0; */
+/* animation-name: footbalPechAnim;
+    animation-duration: 2s;
+    animation-direction: reverse; */
+
+/* } */
+
+
+/* @keyframes footbalPechAnim {
+    0% {
+        margin-left: -3500px;
+    }
+    
+    100% {
+        margin-left: 0px;
+    }
+} */
+
+.toOverflow {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    margin-left: 700px;
+    outline: solid red 2px;
+}
+
+
+.bodyCircle {
+    width: 700px;
+    height: 250px;
+    /* margin: 0 auto;
+    margin-top: 400px; */
+    /* margin-left: 600px; */
+    /* margin-left: 400px; */
+    position: relative;
+    background-color: rgb(163, 161, 54);
+    /* margin-right: 0; */
+    /* border-radius: 1000px; */
+    animation-name: circleExample;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
 }
 
 .circle {
-    width: 150px;
-    height: 150px;
-    background-color: red;
+    background-color: brown;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(0, -50%);
+    left: 200px;
     transform: translateY(-50%);
-    transform: translateY(50%);
-    animation-name: circleMoves;
-    animation-duration: 2s;
-    animation-timing-function: steps(5, end);
-} */
-
-/* @keyframes circleMoves {
-    0% {
-        left: 0%;
-    }
-
-    100% {
-        left: 100%;
-        transform: translate(-100%, -50%);
-    }
-} */
-
-
-
-
-
-
-.section {
-    /* width: 800px; */
-    /* margin: 0 auto;
-    margin-top: 300px; */
-    background-image: url(Gemini_Generated_Image_2foh6a2foh6a2foh.png);
-    /* background-position: ; */
-    /* background-size: cover; */
-    /* background-repeat: repeat; */
-    max-width: 100%;
-    height: 500px;
+    /* animation-name: circleExample;
+    animation-duration: 2s; */
+    /* animation-fill-mode: forwards; */
 }
 
-/* .landDino {
-} */
+.greenCircle {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+@keyframes circleExample {
+    0% {
+        /* margin: 0 auto;
+        margin-top: 400px; */
+        /* margin-left: 200px; */
+    }
+    
+    100% {
+        margin-left: -500px;
+    }
+}
