@@ -801,7 +801,120 @@ sec10.addEventListener("click", (event) => {
 
       scientistsUl.innerHTML = arrLisWithS.join("");
     });
-  } 
+  } else if (event.target.classList[1] === "years") {
+    console.log("after opening if it works");
+
+    let arrayYears = [];
+    let arrayHtmlInner = [];
+
+    scientists.forEach((scientistArr) => {
+      arrayYears.push(scientistArr.dead - scientistArr.born);
+      console.log("after opening if it works");
+    });
+    arrayYears.sort().reverse();
+
+    let i = 0;
+    while (i !== scientists.length) {
+      console.log("after opening if it works");
+      scientists.forEach((scientistArr) => {
+        console.log("after opening if it works");
+        let max = scientistArr.dead - scientistArr.born;
+        if (max === arrayYears[i]) {
+          console.log("after opening if it works");
+          arrayHtmlInner.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientistArr.link}"
+                alt="#"
+              />
+            </li>`);
+          i += 1;
+        }
+      });
+    }
+    console.log(arrayHtmlInner.join(""));
+
+    scientistsUl.innerHTML = arrayHtmlInner.join("");
+  } else if (event.target.classList[1] === "dectroyA") {
+    scientists.forEach((scientistArr) => {
+      let splitedName = scientistArr.name.toLowerCase().split("");
+      console.log(splitedName);
+
+      if (splitedName[0] === "a") {
+        scientistsLi[scientistArr.id - 1].style.display = "none";
+      }
+    });
+  } else if (event.target.classList[1] === "laterScietist") {
+    let maxYear = 0;
+
+    scientists.forEach((scientistArr) => {
+      if (maxYear < scientistArr.born) {
+        maxYear = scientistArr.born;
+      }
+    });
+
+    scientists.forEach((scientist) => {
+      if (scientist.born === maxYear) {
+        scientistsUl.innerHTML = `<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientist.link}"
+                alt="#"
+              />
+            </li>`;
+      }
+    });
+  } else if (event.target.classList[1] === "theMostAndOposite") {
+    // let maxYear = 0;
+    // let minYear = 0;
+    let maxYearsArr = [];
+    let arrayScientists = [];
+
+    scientists.forEach((scientist) => {
+      maxYearsArr.push(scientist.dead - scientist.born);
+    });
+
+    scientists.forEach((scientist) => {
+      if (scientist.dead - scientist.born === Math.max(...maxYearsArr)) {
+        arrayScientists.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientist.link}"
+                alt="#"
+              />
+            </li>`);
+      }
+      if (scientist.dead - scientist.born === Math.min(...maxYearsArr)) {
+        arrayScientists.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientist.link}"
+                alt="#"
+              />
+            </li>`);
+      }
+    });
+    scientistsUl.innerHTML = arrayScientists.join("");
+  } else if (event.target.classList[1] === "sameletters") {
+    let arrayScientists = [];
+    scientists.forEach((scientist) => {
+      let nameScientistFirstLetter = scientist.name.toLowerCase().split("");
+      let surnameScientistFirstLetter = scientist.surname
+        .toLowerCase()
+        .split("");
+
+      if (nameScientistFirstLetter[0] === surnameScientistFirstLetter[0]) {
+        arrayScientists.push(`<li class="scientistsLi">
+              <img
+                class="scientistImages"
+                src="${scientist.link}"
+                alt="#"
+              />
+            </li>`);
+      }
+    });
+    scientistsUl.innerHTML = arrayScientists.join("");
+  }
 });
 
 // console.log(inutsBiggestNum);
