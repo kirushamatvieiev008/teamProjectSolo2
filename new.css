@@ -38,53 +38,122 @@
 
 .toOverflow {
     position: relative;
-    width: 200px;
+    width: 720px;
+    height: 241px;
     overflow: hidden;
+    /* margin-top: 200px; */
     margin-left: 700px;
     outline: solid red 2px;
 }
 
 
 .bodyCircle {
-    width: 700px;
-    height: 250px;
+    width: 3584px;
+    height: 241px;
+    background-image: url(DinoOneAgain1.png);
+    /* background-position: ; */
+    /* background-size: cover; */
+    /* background-size; */
+    /* background-position: bottom; */
+    /* background-repeat: repeat; */
+    margin: 0;
+    padding: 0;
+
+    /* margin-top: 10px;   */
+    
+    /* margin-bottom: 200px; */
+    /* background-size: cover; */
+    /* margin-bottom: 200px; */
+    /* padding-bottom: 200px; */
     /* margin: 0 auto;
     margin-top: 400px; */
     /* margin-left: 600px; */
     /* margin-left: 400px; */
-    position: relative;
-    background-color: rgb(163, 161, 54);
+    position: absolute;
+    top: 20px;
+    /* background-color: rgb(163, 161, 54); */
     /* margin-right: 0; */
     /* border-radius: 1000px; */
     animation-name: circleExample;
     animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-duration: 3.5s;
     animation-timing-function: linear;
 }
 
-.circle {
+.dinoImg {
+    z-index: 2;
+}
+
+.dinoWithoutLegs {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    width: 40px;
+    z-index: 2;
+}
+
+.rightFoot {
+    position: absolute;
+    width: 10px;
+    /* top: 158px;
+    left: 66.5px; */
+    /* top - difference 7 px */
+    top: 165px;
+    left: 66.5px;
+        animation-name: rightStep;
+    animation-duration: 200ms;
+    animation-timing-function: steps(2, start);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.leftFoot {
+        position: absolute;
+    width: 7px;
+    top: 165px;
+    left: 60px;
+    animation-name: leftStep;
+    animation-delay: 100ms;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(2, start);
+    animation-iteration-count: infinite;
+    /* top - difference 6 px */
+}
+
+/* .circle {
     background-color: brown;
     width: 200px;
     height: 200px;
     border-radius: 100%;
     position: absolute;
     top: 50%;
-    left: 200px;
-    transform: translateY(-50%);
+    left: 720px;
+    transform: translateY(-50%); */
     /* animation-name: circleExample;
     animation-duration: 2s; */
     /* animation-fill-mode: forwards; */
+/* } */
+
+
+@keyframes rightStep {
+    0% {
+        top: 171px;
+    }
+
+    100% {
+        top: 158px;
+    }
 }
 
-.greenCircle {
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+@keyframes leftStep {
+    0% {
+        top: 171px;
+    }
+
+    100% {
+        top: 159px;
+    }
 }
 
 
@@ -96,6 +165,6 @@
     }
     
     100% {
-        margin-left: -500px;
+        margin-left: -2864px;
     }
 }
