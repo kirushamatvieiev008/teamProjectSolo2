@@ -54,7 +54,169 @@ const slashBtn = document.querySelector(".slash");
 const container = document.querySelector(".container");
 const moonType = document.querySelector(".moonType");
 const divBlur = document.querySelector(".blur");
-const footer = document.querySelector('footer');
+const footer = document.querySelector("footer");
+
+const landDino = document.querySelector(".bodyCircle");
+const rightFootDino = document.querySelector(".rightFoot");
+const leftFootDino = document.querySelector(".leftFoot");
+const cactuses = document.querySelectorAll(".imgsCactus");
+const toOverflowDiv = document.querySelector(".toOverflow");
+const dinoBody = document.querySelector(".dinoWithoutLegs");
+
+document.addEventListener("keydown", (event) => {
+  event.preventDefault();
+  let just = true;
+
+  if (event.code === "Space") {
+    landDino.style.animationName = "circleExample";
+
+    rightFootDino.style.display = "none";
+    leftFootDino.style.display = "none";
+    dinoBody.setAttribute("src", "dinoWithLegs.png");
+    dinoBody.style.animationName = "jumpBody";
+
+    setTimeout(() => {
+      dinoBody.setAttribute("src", "dinoWithoutLegs.png");
+      dinoBody.style.animationName = "none";
+      rightFootDino.style.animationName = "rightStep";
+      leftFootDino.style.animationName = "leftStep";
+      rightFootDino.style.display = "block";
+      leftFootDino.style.display = "block";
+    }, 400);
+
+    const timeDelay = Math.round(Math.random() * (2000 - 300) + 1);
+    const whichCactus = Math.round(Math.random() * (4 - 0) + 1);
+    console.log(whichCactus);
+
+    
+    // while (cactuses[whichCactus - 1].x < 799) {
+      //   console.log('thats Works');
+      
+      // }
+      
+      cactuses.forEach((cactus) => {
+        cactus.style.display = "none";
+      });
+      
+    setTimeout(() => {
+      cactuses[whichCactus - 1].style.display = "block";
+      console.log(cactuses[whichCactus - 1].x);
+    }, timeDelay);
+
+    // basic x = 1458
+
+    setTimeout(() => {
+      // if (
+        //   cactuses[whichCactus - 1].x > 757 &&
+        
+        //   cactuses[whichCactus - 1].x < 799 &&
+        //   dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
+        // ) {
+          //   console.log('it works');
+          
+          //   landDino.style.animationName = "none";
+          //   rightFootDino.style.animationName = "none";
+          //   leftFootDino.style.animationName = "none";
+      //   dinoBody.style.animationName = "none";
+      // }
+      
+      // while (true) {
+      //   console.log(cactuses[whichCactus - 1].x);
+      //   if (
+      //   cactuses[whichCactus - 1].x > 757 &&
+      //   cactuses[whichCactus - 1].x < 799 &&
+      //   dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
+      // ) {
+        //   console.log(just);
+        
+        
+        //   landDino.style.animationName = "none";
+        //   rightFootDino.style.animationName = "none";
+        //   leftFootDino.style.animationName = "none";
+        //   dinoBody.style.animationName = "none";
+        // }
+          // console.log(cactuses[whichCactus - 1].x > 757 && cactuses[whichCactus - 1].x < 799);
+          // if (cactuses[whichCactus - 1].x < 799) {
+          //   just = false;
+
+          // }
+          // console.log('it is smaller 799');
+          
+          // console.log(just);
+      // }
+
+    }, timeDelay + 790);
+
+
+    // if (
+    //   // cactuses[whichCactus - 1].style.left < "91px"
+    //   // &&
+    //   // cactuses[whichCactus - 1].style.left > "49px"
+    //   // &&
+    //   // dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
+    // ) {
+    //   console.log('itStopped');
+
+    //   landDino.style.animationName = "none";
+    //   rightFootDino.style.animationName = "none";
+    //   leftFootDino.style.animationName = "none";
+    //   dinoBody.style.animationName = "none";
+    // }
+  }
+});
+
+// landDino.style.animationName = "none";
+// rightFootDino.style.animationName = "none";
+// leftFootDino.style.animationName = "none";
+// // rightFootDino.style.display = "block";
+// // leftFootDino.style.display = "block";
+// dinoBody.style.animationName = "none";
+
+// document.addEventListener("keydown", (event) => {
+//   event.preventDefault();
+//   console.log(event.code);
+//   dinoBody.setAttribute("src", "dinoWithoutLegs.png");
+//   rightFootDino.style.display = "block";
+//   leftFootDino.style.display = "block";
+
+//   if (event.code === "Space") {
+//     const randomTime = Math.round(Math.random() * (2000 - 1000) + 10);
+//     const randomCactus = Math.round(Math.random() * (4 - 1) + 1);
+
+//     cactuses.forEach(cactusIter => {
+//       cactusIter.style.animationName = 'none';
+//     });
+
+//     cactuses[randomCactus].style.animationName = 'cactusMoves';
+
+//     if (cactuses[randomCactus].style.left === '250px') {
+
+//     }
+
+//     rightFootDino.style.animationName = "rightStep";
+//     leftFootDino.style.animationName = "leftStep";
+//     landDino.style.animationName = "circleExample";
+
+//     rightFootDino.style.display = "none";
+//     leftFootDino.style.display = "none";
+//     dinoBody.setAttribute("src", "dinoWithLegs.png");
+//     dinoBody.style.animationName = "jumpBody";
+//   }
+
+//   setTimeout(() => {
+//     dinoBody.setAttribute("src", "dinoWithoutLegs.png");
+//     rightFootDino.style.display = "block";
+//     leftFootDino.style.display = "block";
+//     dinoBody.style.animationName = "none";
+//   }, 380);
+//   if (landDino.style.animationName === "circleExample") {
+//     // const typeCactus = Math.round(Math.random() * (4 - 0) + 1);
+//     cactuses.forEach((cactus) => {
+//       cactus.style.display = "none";
+//       cactuses[typeCactus].style.display = "block";
+//     });
+//   }
+// });
 
 applyBtn.addEventListener("click", (event) => {
   event.preventDefault();
