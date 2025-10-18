@@ -55,115 +55,180 @@ const container = document.querySelector(".container");
 const moonType = document.querySelector(".moonType");
 const divBlur = document.querySelector(".blur");
 const footer = document.querySelector("footer");
-
 const landDino = document.querySelector(".bodyCircle");
 const rightFootDino = document.querySelector(".rightFoot");
 const leftFootDino = document.querySelector(".leftFoot");
 const cactuses = document.querySelectorAll(".imgsCactus");
 const toOverflowDiv = document.querySelector(".toOverflow");
 const dinoBody = document.querySelector(".dinoWithoutLegs");
+const toPlayAgainDiv = document.querySelector(".toPlayAgain");
+const ulosedText = document.querySelector(".ulosed");
+const playagainBtn = document.querySelector(".playagain");
+
+const loseTop = (value) => {
+  setTimeout(() => {
+    console.log(value.x);
+    console.log(dinoBody.x);
+
+    if (dinoBody.y > 80) {
+      console.log(dinoBody.y);
+      
+      dinoBody.style.animationName = "none";
+      rightFootDino.style.animationName = "none";
+      leftFootDino.style.animationName = "none";
+      landDino.style.animationName = "none";
+      toPlayAgainDiv.style.display = "block";
+      ulosedText.style.display = "block";
+      playagainBtn.style.display = "block";
+      value.classList.add("theEnd");
+    }
+
+    // if (dinoBody.y === 138) {
+    //   dinoBody.style.animationName = "none";
+    //   rightFootDino.style.animationName = "none";
+    //   leftFootDino.style.animationName = "none";
+    //   landDino.style.animationName = "none";
+    //   toPlayAgainDiv.style.display = "block";
+    //   ulosedText.style.display = "block";
+    //   playagainBtn.style.display = "block";
+    //   value.classList.add("theEnd");
+    //   // console.log(value.animationPlayState);
+    // }
+  }, 821);
+};
+
+let cactusGlobal = true;
+
+// const againFunc = () => {};
+
+function none(value) {
+  setTimeout(() => {
+    console.log(value.y);
+    console.log(dinoBody.x);
+
+    if (dinoBody.y === 138) {
+      dinoBody.style.animationName = "none";
+      rightFootDino.style.animationName = "none";
+      leftFootDino.style.animationName = "none";
+      landDino.style.animationName = "none";
+      toPlayAgainDiv.style.display = "block";
+      ulosedText.style.display = "block";
+      playagainBtn.style.display = "block";
+      value.classList.add("theEnd");
+      // console.log(value.animationPlayState);
+    }
+  }, 800);
+}
+
+// const funcLogLeft = (value) => {
+//   setTimeout(() => {
+//     console.log(value.x);
+//     console.log(dinoBody.x);
+
+//     if (dinoBody.y === 138) {
+//       return true;
+//     }
+//   }, 840);
+// let i = 0;
+// console.log(value.x);
+
+// while (i !== 1) {
+//   setTimeout(() => {
+//     console.log('smth');
+
+//     if (value.x < 800) {
+//       console.log('cactus is less than 800');
+//       i = 10000;
+//     }
+//     i += 1;
+//   }, 1000)
+// };
+
+// };
 
 document.addEventListener("keydown", (event) => {
-  event.preventDefault();
-  let just = true;
-
+  // event.preventDefault();
   if (event.code === "Space") {
-    landDino.style.animationName = "circleExample";
-
-    rightFootDino.style.display = "none";
-    leftFootDino.style.display = "none";
-    dinoBody.setAttribute("src", "dinoWithLegs.png");
-    dinoBody.style.animationName = "jumpBody";
-
-    setTimeout(() => {
-      dinoBody.setAttribute("src", "dinoWithoutLegs.png");
-      dinoBody.style.animationName = "none";
-      rightFootDino.style.animationName = "rightStep";
-      leftFootDino.style.animationName = "leftStep";
-      rightFootDino.style.display = "block";
-      leftFootDino.style.display = "block";
-    }, 400);
-
-    const timeDelay = Math.round(Math.random() * (2000 - 300) + 1);
-    const whichCactus = Math.round(Math.random() * (4 - 0) + 1);
-    console.log(whichCactus);
-
-    
-    // while (cactuses[whichCactus - 1].x < 799) {
-      //   console.log('thats Works');
-      
-      // }
-      
+    if (toPlayAgainDiv.style.display !== "block") {
       cactuses.forEach((cactus) => {
         cactus.style.display = "none";
       });
-      
-    setTimeout(() => {
-      cactuses[whichCactus - 1].style.display = "block";
-      console.log(cactuses[whichCactus - 1].x);
-    }, timeDelay);
+      cactuses.forEach((cactus) => {
+        cactus.style.display = "none";
+      });
+      setTimeout(() => {
+        console.log(dinoBody.y);
+      }, 200);
 
-    // basic x = 1458
+      console.log(dinoBody.x, dinoBody.y);
 
-    setTimeout(() => {
-      // if (
-        //   cactuses[whichCactus - 1].x > 757 &&
-        
-        //   cactuses[whichCactus - 1].x < 799 &&
-        //   dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
-        // ) {
-          //   console.log('it works');
-          
-          //   landDino.style.animationName = "none";
-          //   rightFootDino.style.animationName = "none";
-          //   leftFootDino.style.animationName = "none";
-      //   dinoBody.style.animationName = "none";
+      // if (cactuses[whichCactus - 1].style.dislay === 'block' && cactuses[whichCactus - 1].x === 798) {
+      //   if (dinoBody.getAttribute('src') === "dinoWithLegs.png") {
+      //   setTimeout(() => {
+      //     console.log(dinoBody.y);
+
+      //   }, 200)
+      //   }
       // }
-      
-      // while (true) {
-      //   console.log(cactuses[whichCactus - 1].x);
-      //   if (
-      //   cactuses[whichCactus - 1].x > 757 &&
-      //   cactuses[whichCactus - 1].x < 799 &&
-      //   dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
-      // ) {
-        //   console.log(just);
-        
-        
-        //   landDino.style.animationName = "none";
+
+      const timeDelay = Math.round(Math.random() * (2000 - 300) + 1);
+      const whichCactus = Math.round(Math.random() * (4 - 0) + 1);
+
+      landDino.style.animationName = "circleExample";
+      rightFootDino.style.display = "none";
+      leftFootDino.style.display = "none";
+
+      dinoBody.setAttribute("src", "dinoWithLegs.png");
+      dinoBody.style.animationName = "jumpBody";
+
+      setTimeout(() => {
+        dinoBody.setAttribute("src", "dinoWithoutLegs.png");
+        dinoBody.style.animationName = "none";
+        rightFootDino.style.animationName = "rightStep";
+        leftFootDino.style.animationName = "leftStep";
+        rightFootDino.style.display = "block";
+        leftFootDino.style.display = "block";
+      }, 400);
+
+      console.log(whichCactus);
+
+      cactuses.forEach((cactus) => {
+        cactus.style.display = "none";
+      });
+
+      setTimeout(() => {
+        cactuses[whichCactus - 1].style.display = "block";
+        cactusGlobal = cactuses[whichCactus - 1];
+        // console.log(none(cactuses[whichCactus - 1]));
+        none(cactuses[whichCactus - 1]);
+        loseTop(cactuses[whichCactus - 1]);
+        // if (none(cactuses[whichCactus - 1])) {
+        //   dinoBody.style.animationName = "none";
         //   rightFootDino.style.animationName = "none";
         //   leftFootDino.style.animationName = "none";
-        //   dinoBody.style.animationName = "none";
+        //   landDino.style.animationName = "none";
         // }
-          // console.log(cactuses[whichCactus - 1].x > 757 && cactuses[whichCactus - 1].x < 799);
-          // if (cactuses[whichCactus - 1].x < 799) {
-          //   just = false;
-
-          // }
-          // console.log('it is smaller 799');
-          
-          // console.log(just);
-      // }
-
-    }, timeDelay + 790);
-
-
-    // if (
-    //   // cactuses[whichCactus - 1].style.left < "91px"
-    //   // &&
-    //   // cactuses[whichCactus - 1].style.left > "49px"
-    //   // &&
-    //   // dinoBody.offsetTop < dinoBody.offsetTop - cactuses[1].naturalHeight
-    // ) {
-    //   console.log('itStopped');
-
-    //   landDino.style.animationName = "none";
-    //   rightFootDino.style.animationName = "none";
-    //   leftFootDino.style.animationName = "none";
-    //   dinoBody.style.animationName = "none";
-    // }
+      }, timeDelay);
+    }
   }
 });
+
+playagainBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  toPlayAgainDiv.style.display = "none";
+  playagainBtn.style.display = "none";
+  ulosedText.style.display = "none";
+  cactuses.forEach((cactus) => {
+    cactus.classList.remove("theEnd");
+    // cactuses.style.display = 'none';
+  });
+});
+
+// while(cactusGlobal) {
+//   console.log(cactusGlobal.x);
+
+// }
+// console.log("smth");
 
 // landDino.style.animationName = "none";
 // rightFootDino.style.animationName = "none";

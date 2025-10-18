@@ -36,6 +36,7 @@
     animation-duration: .4s;
     animation-timing-function: ease-in-out;
     animation-duration: 1;
+    /* animation-play-state: paused; */
 }
 
 .rightFoot {
@@ -69,6 +70,7 @@
     position: absolute;
     top: 135px;
     z-index: 3;
+    /* animation-play-state: paused; */
 }
 
 .imgCactus1 {
@@ -82,6 +84,26 @@
     animation-duration: 0.98s;
     animation-timing-function: linear; */
 }
+
+.theEnd {
+    animation-play-state: paused;
+}
+
+/* .imgCactus2:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus3:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus4:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus5:hover {
+    animation-play-state: paused;
+} */
 
 .imgCactus2 {
     display: none;
@@ -191,4 +213,43 @@
     100% {
         left: -70px;
     }
+}
+
+.toPlayAgain {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+}
+
+.ulosed {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+
+    /* width: ; */
+    /* height: 100%; */
+    /* background-color: rgba(0, 0, 0, 0.295); */
+}
+
+.playagain {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-top: 120.5px; */
+    /* transform: translate(-50%, -50%); */
+    /* margin-left: 350px; */
+
+
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.562);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 19;
 }
