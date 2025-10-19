@@ -1076,6 +1076,263 @@ footer {
     margin-top: 18px;
 }
 
+.toOverflow {
+    position: relative;
+    width: 720px;
+    height: 241px;
+    overflow: hidden;
+    /* margin-top: 200px; */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    /* outline: solid red 2px; */
+}
+
+.bodyCircle {
+    width: 3584px;
+    height: 241px;
+    background-image: url(images/dino/DinoOneAgain1.png);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+
+    animation-name: none;
+    /* animation-name: circleExample; */
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+}
+
+
+.dinoWithoutLegs {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    width: 40px;
+    z-index: 2;
+    /* animation-name: none; */
+    /* animation-name: jumpBody; */
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1;
+    /* animation-play-state: paused; */
+}
+
+.rightFoot {
+    position: absolute;
+    width: 10px;
+    top: 165px;
+    left: 66.5px;
+    animation-name: none;
+    /* animation-name: rightStep; */
+    animation-duration: 200ms;
+    animation-timing-function: steps(2, start);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.leftFoot {
+    position: absolute;
+    width: 7px;
+    top: 165px;
+    left: 60px;
+    animation-name: none;
+    /* animation-name: leftStep; */
+    animation-delay: 100ms;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(2, start);
+    animation-iteration-count: infinite;
+}
+
+.imgsCactus {
+    position: absolute;
+    top: 135px;
+    z-index: 3;
+    /* animation-play-state: paused; */
+}
+
+.imgCactus1 {
+    display: none;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear;
+    left: 750px;
+    /* left:  750px;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear; */
+}
+
+.theEnd {
+    animation-play-state: paused;
+}
+
+/* .imgCactus2:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus3:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus4:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus5:hover {
+    animation-play-state: paused;
+} */
+
+.imgCactus2 {
+    display: none;
+    top: 145px;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear;
+    left: 750px;
+}
+
+.imgCactus3 {
+    display: none;
+    top: 145px;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear;
+    left: 750px;
+}
+
+.imgCactus4 {
+    display: none;
+    top: 145px;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear;
+    left: 750px;
+}
+
+.imgCactus5 {
+    display: none;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear;
+    left: 750px;
+}
+
+@keyframes rightStep {
+    0% {
+        top: 171px;
+    }
+
+    100% {
+        top: 158px;
+    }
+}
+
+@keyframes leftStep {
+    0% {
+        top: 171px;
+    }
+
+    100% {
+        top: 159px;
+    }
+}
+
+
+@keyframes circleExample {
+    0% {}
+
+    100% {
+        margin-left: -2864px;
+    }
+}
+
+
+@keyframes jumpBody {
+    0% {
+        top: 120px;
+        left: 38px;
+        width: 65px;
+    }
+
+    50% {
+        top: 55px;
+        left: 38px;
+        width: 65px;
+    }
+
+    100% {
+        top: 120px;
+        left: 38px;
+        width: 65px;
+    }
+}
+
+@keyframes rightFootJump {
+    0% {
+        top: 171px;
+    }
+
+    50% {
+        top: 90px;
+    }
+
+    100% {
+        top: 171px;
+    }
+}
+
+@keyframes cactusMoves {
+    0% {
+        left: 750px;
+        display: block;
+    }
+
+    100% {
+        left: -70px;
+    }
+}
+
+.toPlayAgain {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+}
+
+.ulosed {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+
+    /* width: ; */
+    /* height: 100%; */
+    /* background-color: rgba(0, 0, 0, 0.295); */
+}
+
+.playagain {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-top: 120.5px; */
+    /* transform: translate(-50%, -50%); */
+    /* margin-left: 350px; */
+
+
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.562);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 19;
+}
+
 /* 
 .montserrat-alternates-regular {
   font-family: "Montserrat Alternates", sans-serif;
