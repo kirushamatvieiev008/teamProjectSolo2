@@ -64,13 +64,29 @@ const dinoBody = document.querySelector(".dinoWithoutLegs");
 const toPlayAgainDiv = document.querySelector(".toPlayAgain");
 const ulosedText = document.querySelector(".ulosed");
 const playagainBtn = document.querySelector(".playagain");
+const footballPeech = document.querySelector('.peech');
+const footballBall = document.querySelector('.ball');
 
-const loseTop = (value) => {
+
+footballPeech.addEventListener('click', event => {
+  console.log(event.clientX);
+  const clientOnx = event.clientX;
+  const clientOny = event.clientY;
+
+  footballBall.style.top = `${clientOny}px`;
+  footballBall.style.left = `${clientOnx}px`;
+
+  
+})
+
+let positionDino;
+
+const loseTop = (value, stateDinoPositionY) => {
   setTimeout(() => {
     console.log(value.x);
     console.log(dinoBody.x);
 
-    if (dinoBody.y > 80) {
+    if (dinoBody.y > stateDinoPositionY - 50) {
       console.log(dinoBody.y);
       
       dinoBody.style.animationName = "none";
@@ -96,17 +112,23 @@ const loseTop = (value) => {
     // }
   }, 821);
 };
+ // 232
+    // console.log(document.dinoBody.y); // 217
 
 let cactusGlobal = true;
 
 // const againFunc = () => {};
 
-function none(value) {
+function none(value, stateDinoPositionY) {
   setTimeout(() => {
-    console.log(value.y);
-    console.log(dinoBody.x);
+    // console.log(`${stateDinoPositionY}, y state`);
+    //     console.log(`${dinoBody.y}, y jumped`);
+    // console.log(document.value.y); // 232
+    // console.log(document.dinoBody.y); // 217
 
-    if (dinoBody.y === 138) {
+    if (dinoBody.y === stateDinoPositionY - 15) {
+      console.log('it works');
+      
       dinoBody.style.animationName = "none";
       rightFootDino.style.animationName = "none";
       leftFootDino.style.animationName = "none";
@@ -146,9 +168,12 @@ function none(value) {
 
 // };
 
+
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
     event.preventDefault();
+    console.log(dinoBody.y);
+    
     if (toPlayAgainDiv.style.display !== "block") {
       cactuses.forEach((cactus) => {
         cactus.style.display = "none";
@@ -202,8 +227,11 @@ document.addEventListener("keydown", (event) => {
         cactuses[whichCactus - 1].style.display = "block";
         cactusGlobal = cactuses[whichCactus - 1];
         // console.log(none(cactuses[whichCactus - 1]));
-        none(cactuses[whichCactus - 1]);
-        loseTop(cactuses[whichCactus - 1]);
+        // positionDino = cactuses[whichCactus - 1].y;
+        // console.log(positionDino);
+        
+        none(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
+        loseTop(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
         // if (none(cactuses[whichCactus - 1])) {
         //   dinoBody.style.animationName = "none";
         //   rightFootDino.style.animationName = "none";
