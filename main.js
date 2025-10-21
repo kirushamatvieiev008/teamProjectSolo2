@@ -66,8 +66,20 @@ const ulosedText = document.querySelector(".ulosed");
 const playagainBtn = document.querySelector(".playagain");
 const footballPeech = document.querySelector('.peech');
 const footballBall = document.querySelector('.ball');
+const inpRegistration = document.querySelector('.inpEmail');
+const subscribe = document.querySelector('.subscribe');
 
-// console.log(body.style.width);
+subscribe.addEventListener('click', event => {
+  event.preventDefault();
+
+  const userEmail = inpRegistration.value;
+
+  if (userEmail.includes('@') && userEmail.includes('.')) {
+    alert(`your email: ${userEmail}`);
+    
+  }
+});
+
 
 const coordinatesPeech = footballPeech.getBoundingClientRect();
 
