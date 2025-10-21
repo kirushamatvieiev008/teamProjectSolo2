@@ -416,6 +416,7 @@ body {
     background-size: cover;
     background-color: #BDBDBD;
     margin: 0;
+    width: 100%;
 }
 
 button {
@@ -756,6 +757,7 @@ h3 {
 }
 
 .peech {
+    overflow: hidden;
     position: relative;
     width: 720px;
     height: 220px;
@@ -766,6 +768,9 @@ h3 {
 }
 
 .ball {
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    
     width: 50px;
     position: absolute;
     top: 50%;

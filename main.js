@@ -67,14 +67,46 @@ const playagainBtn = document.querySelector(".playagain");
 const footballPeech = document.querySelector('.peech');
 const footballBall = document.querySelector('.ball');
 
+// console.log(body.style.width);
+
+const coordinatesPeech = footballPeech.getBoundingClientRect();
 
 footballPeech.addEventListener('click', event => {
-  console.log(event.clientX);
-  const clientOnx = event.clientX;
-  const clientOny = event.clientY;
+  const topPeech = coordinatesPeech.top;
+  console.log(`peech: ${topPeech}`);
+  const clientOnY = event.pageY;
+  console.log(`client: ${clientOnY}`);
+  const top = clientOnY - topPeech;
+  console.log(top);
+  
+    footballBall.style.top = `${top}px`;
+  
 
-  footballBall.style.top = `${clientOny}px`;
-  footballBall.style.left = `${clientOnx}px`;
+  // const heightOfSite = window.innerHeight;
+  // const heightSiteWithoutPeech = heightOfSite - footballPeech.clientHeight;
+  // const heightSiteWithoutPeechDel2 = heightSiteWithoutPeech / 2;
+  // const heightWidthWithoutRightSide = footballPeech.clientHeight + heightSiteWithoutPeechDel2;
+
+
+
+
+  // for left
+  const clientOnx = event.clientX;
+  const widthOfSite = window.innerWidth;
+  const widthSiteWithoutPeech = widthOfSite - footballPeech.clientWidth;
+  const widthSiteWithoutPeechDel2 = widthSiteWithoutPeech / 2;
+  const bodyWidthWithoutRightSide = footballPeech.clientWidth + widthSiteWithoutPeechDel2;
+  
+  if (widthSiteWithoutPeechDel2 < clientOnx && clientOnx < bodyWidthWithoutRightSide) {
+    const left = clientOnx - widthSiteWithoutPeechDel2;
+    footballBall.style.left = `${left}px`;
+
+  }
+  // console.log(clientOnx);
+  
+  // footballBall.x = clientOnx;
+  // footballBall.y = clientOny;
+
 
   
 })
