@@ -68,6 +68,13 @@ const footballPeech = document.querySelector('.peech');
 const footballBall = document.querySelector('.ball');
 const inpRegistration = document.querySelector('.inpEmail');
 const subscribe = document.querySelector('.subscribe');
+// const moonTypeBack = document.querySelector('.moonType');
+
+// body.scrollHeight
+
+// moonTypeBack.style.height = `${body.scrollY}`;
+// moonType.style.height = `${body.scrollHeight}px`;
+
 
 subscribe.addEventListener('click', event => {
   event.preventDefault();
