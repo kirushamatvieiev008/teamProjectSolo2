@@ -410,7 +410,7 @@ body.noscroll {
 }
 
 body {
-    background-image: url(back.png);
+    /* background-image: url(back.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -432,7 +432,7 @@ ul {
 
 .container {
     margin: 0;
-    width: 1090px;
+    width: 75%;
     margin: 0 auto;
     background-color: white;
 }
@@ -456,13 +456,25 @@ header {
     padding-bottom: 36px;
 }
 
+.DivFelex_Sec1 {
+    width: 576px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* transform: translateX(-50%); */
+    align-items: center;
+    padding-bottom: 36px;
+}
+
 .DivFelexHeader {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: white;
     z-index: 5;
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -601,7 +613,7 @@ h3 {
 .formYear {
     display: flex;
     width: 217px;
-    margin-left: 275px;
+    /* margin-left: 275px; */
     margin-right: 149px;
 }
 
@@ -625,7 +637,8 @@ h3 {
 .formGuess {
     display: flex;
     margin-right: 202px;
-    margin-left: 275px;
+    /* margin-left: 275px; */
+    /* margin-left: 15%; */
 }
 
 .inpSec2 {
@@ -636,7 +649,7 @@ h3 {
     display: flex;
     width: 256px;
     height: 60px;
-    margin-left: 435px;
+    /* margin-left: 435px; */
     justify-content: space-between;
     margin-right: 104px;
 }
@@ -739,11 +752,14 @@ h3 {
 }
 
 .formCulcTime {
-    margin-left: 330px;
+    /* margin-left: 330px; */
     display: flex;
 }
 
 .divCulcTime {
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 458px;
     display: flex;
     align-items: center;
     margin-bottom: 36px;
@@ -770,14 +786,14 @@ h3 {
 .ball {
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
-    
+
     width: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    
+
 }
 
 
@@ -788,9 +804,7 @@ h3 {
         left: 50%;
     }
 
-    100% {
-        
-    }
+    100% {}
 }
 
 
@@ -942,7 +956,7 @@ h3 {
 }
 
 .liCategories {
-    width: 490px;
+    /* width: 490px; */
 }
 
 .category {
@@ -1006,6 +1020,8 @@ h3 {
 }
 
 .categoriesUl {
+    width: 857px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1034,8 +1050,11 @@ footer {
 
 .footerFlex {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
+    width: 75%;
+    margin: 0 auto;
     height: 100%;
 }
 
@@ -1355,6 +1374,1427 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     z-index: 19;
+}
+
+
+
+
+
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+/* max: 1100px; */
+
+
+
+
+
+
+@media (max-width: 1100px) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    input {
+        outline: none;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type='number'],
+    input[type="number"]:hover,
+    input[type="number"]:focus {
+        appearance: none;
+    }
+
+    .menuHeader {
+        display: none;
+        position: absolute;
+        left: -40px;
+        /* left: 539px;
+    top: 47px; */
+        list-style: none;
+        width: 160px;
+        height: 105px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #FFFFFF;
+        /* outline: solid 1px rgb(0, 0, 0); */
+        border: 1px solid black;
+        border-top: none;
+        z-index: 2;
+    }
+
+    /* .plus {
+    
+} */
+
+    /* .indexCulc {
+    cursor: not-allowed;
+} */
+
+    .result {
+        width: 118px;
+        height: 35px;
+        border-radius: 20px;
+        background-color: #D7D7D7;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #7E7E7E;
+    }
+
+    .time {
+        color: #000000;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .menuHeader li {
+        width: 100%;
+        height: 35px;
+        text-align: center;
+    }
+
+    .menuHeader li:hover {
+        background-color: #F1F1F1;
+    }
+
+    .pcVariant1 {
+        display: none;
+        width: 60px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 36px;
+    }
+
+    .pcVariant2 {
+        display: none;
+        width: 60px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 36px;
+    }
+
+    .pcVariant3 {
+        display: none;
+        width: 60px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 36px;
+    }
+
+    .buttonOrderRock {
+        background-color: #00000000;
+        border: none;
+
+        border-radius: 100%;
+    }
+
+    .buttonOrderScissors {
+        background-color: #00000000;
+        border: none;
+
+        border-radius: 100%;
+    }
+
+    .buttonOrderPaper {
+        background-color: #00000000;
+        border: none;
+
+        border-radius: 100%;
+    }
+
+    .galarySlider {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /* display: block; */
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imgsSlider {
+        background-color: red;
+        border-radius: 20px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galarySlider li {
+        display: none;
+    }
+
+    .imgsSliderReal {
+        background-color: red;
+        border-radius: 20px;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+    }
+
+
+    .siteSettingsBtns {
+        background-color: #00000000;
+        border: none;
+        color: #000000;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+    }
+
+    .lastUlsettings {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .forMargin {
+        padding-bottom: 36px;
+    }
+
+    .blur {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.267);
+        z-index: 10;
+        position: absolute;
+    }
+
+    body.noscroll {
+        overflow: hidden;
+    }
+
+    .sunOrNight {
+        background-color: #00000000;
+        border: none;
+        text-align: center;
+        display: flex;
+
+    }
+
+    .thankBlock {
+        display: none;
+        width: 463px;
+        height: 245px;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .closeThanks {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        width: 15px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .helloBlock {
+        width: 576px;
+        height: 316px;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .imgsBackIntro {
+        width: 30px;
+        position: absolute;
+    }
+
+    .imgIntro1 {
+        top: 154px;
+        left: 41px;
+    }
+
+    .imgIntro11 {
+        top: 69px;
+        left: 43px;
+    }
+
+    .imgIntro2 {
+        top: 154px;
+        right: 41px;
+    }
+
+    .imgIntro22 {
+        top: 69px;
+        right: 43px;
+    }
+
+    .imgIntro3 {
+        top: 230px;
+        left: 85px;
+    }
+
+    .imgIntro33 {
+        top: 145px;
+        left: 86px;
+    }
+
+    .imgIntro4 {
+        top: 230px;
+        right: 85px;
+    }
+
+    .imgIntro44 {
+        top: 145px;
+        right: 86px;
+    }
+
+    .introtext {
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        width: 400px;
+        line-height: 100%;
+        margin: 0 auto;
+        margin-top: 46px;
+        line-height: 15px;
+    }
+
+    .close {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        width: 15px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .closeThanks {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        width: 15px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .enterName {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        display: block;
+        margin-top: 42px;
+        margin-bottom: 18px;
+        text-align: center;
+
+    }
+
+    .inpLogIn {
+        width: 169px;
+        height: 35px;
+        background-color: #D7D7D7;
+        border-radius: 20px;
+        padding-left: 10px;
+        border: none;
+
+    }
+
+    .inpLogIn::placeholder {
+        color: #7E7E7E;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .formLogIn {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .apply {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        font-size: 12px;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+        border-radius: 20px;
+        width: 105px;
+        height: 35px;
+        margin-top: 18px;
+    }
+
+    .imgIntro1THank {
+        top: 69px;
+        left: 43px;
+    }
+
+    .imgIntro2THank {
+        top: 69px;
+        right: 43px;
+    }
+
+    .imgIntro3THank {
+        top: 145px;
+        right: 86px;
+    }
+
+    .imgIntro4THank {
+        top: 145px;
+        left: 86px;
+    }
+
+    .thanks {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 83px;
+    }
+
+    .error {
+        display: none;
+        text-align: center;
+        margin-top: 15px;
+        color: red;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 10px;
+    }
+
+    body {
+        /* background-image: url(back.png); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #BDBDBD;
+        margin: 0;
+        width: 100%;
+    }
+
+    button {
+        padding: 0;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        margin: 0;
+        width: 75%;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    header {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logoHeader {
+        width: 93px;
+        height: 38.15px;
+    }
+
+    .DivFelex {
+        display: flex;
+        align-items: center;
+        padding-bottom: 36px;
+    }
+
+    .DivFelex_Sec1 {
+        width: 576px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        /* transform: translateX(-50%); */
+        align-items: center;
+        padding-bottom: 36px;
+    }
+
+    .DivFelexHeader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        z-index: 5;
+        width: 100%;
+        text-align: center;
+    }
+
+    .interactiveTick {
+        width: 9px;
+        height: 5px;
+        margin: 0;
+        padding-left: 6px;
+    }
+
+    .ulNavig {
+        display: flex;
+        gap: 50px;
+        padding-left: 60px;
+        margin-left: 21px;
+        margin-right: 361px;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        background-color: white;
+    }
+
+    .buttonSettings {
+        color: #000000;
+        text-decoration: none;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000000;
+        border: none;
+    }
+
+    .aMenu {
+        color: #000000;
+        text-decoration: none;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000000;
+        border: none;
+    }
+
+    .hello {
+        color: #000000;
+        margin-left: 51px;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .sunMoon {
+        width: 40px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #000000;
+        text-align: center;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 36px;
+        margin-bottom: 36px;
+    }
+
+    .line {
+        width: 536px;
+        height: 1px;
+        margin: 0 auto;
+        background-color: #000000;
+
+    }
+
+    h3 {
+        color: #000000;
+        font-size: 16px;
+        text-align: center;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        margin-bottom: 36px;
+        margin-top: 36px;
+    }
+
+    .enterYear {
+        padding-left: 10px;
+        width: 205px;
+        height: 35px;
+        background-color: #D7D7D7;
+        border-radius: 20PX;
+        border: none;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+    }
+
+    .enterYear:focus {
+        border: none;
+    }
+
+    .enterYear::placeholder {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        color: #7E7E7E;
+    }
+
+    .enterYear::-moz-focus-inner {
+        border: none;
+    }
+
+    .lupaBtn {
+        margin-left: -35px;
+        width: 35px;
+        height: 37px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #000000;
+        border: none;
+    }
+
+    .luppa {
+        width: 15px;
+    }
+
+    .formYear {
+        display: flex;
+        width: 217px;
+        /* margin-left: 275px; */
+        margin-right: 149px;
+    }
+
+    .congratulations {
+        color: #039900;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .uBorn {
+        color: #039900;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .formGuess {
+        display: flex;
+        margin-right: 202px;
+        /* margin-left: 275px; */
+        /* margin-left: 15%; */
+    }
+
+    .inpSec2 {
+        width: 150px;
+    }
+
+    .game3Ul {
+        display: flex;
+        width: 256px;
+        height: 60px;
+        /* margin-left: 435px; */
+        justify-content: space-between;
+        margin-right: 104px;
+    }
+
+    .imgsGame3 {
+        width: 60px;
+    }
+
+    .judge {
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 170%;
+    }
+
+    .checlCPVariant {
+        width: 182px;
+        height: 35px;
+        border-radius: 20px;
+        border: none;
+        background-color: #000000;
+        color: #fff;
+        margin: 36px auto;
+        display: block;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+    .enterNumCulc {
+        width: 135px;
+        height: 35px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, 0.25);
+        border: none;
+        background-color: #D7D7D7;
+        padding-left: 20px;
+    }
+
+    .bigNums {
+        width: 135px;
+        height: 35px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, 0.25);
+        border: none;
+        background-color: #D7D7D7;
+        padding-left: 20px;
+    }
+
+    .enterNumCulc::placeholder {
+        /* padding-left: 20px; */
+        color: #7E7E7E;
+    }
+
+    .bigNums::placeholder {
+        /* padding-left: 20px; */
+        color: #7E7E7E;
+    }
+
+    .ulCulc {
+        display: flex;
+        width: 62px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .indexCulc {
+        background-color: #000000;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+        border-radius: 100%;
+        border: none;
+        color: #fff;
+        width: 25px;
+        height: 25px;
+    }
+
+    .gameCulc {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        margin-right: 38px;
+    }
+
+
+    .DivFelex4Sect {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 36px;
+    }
+
+    .equal {
+        margin-right: 38px;
+    }
+
+    .numberCulcTime {
+        width: 150px;
+    }
+
+    .formCulcTime {
+        /* margin-left: 330px; */
+        display: flex;
+    }
+
+    .divCulcTime {
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 458px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 36px;
+        gap: 30px;
+    }
+
+    .dinosour {
+        width: 720px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .peech {
+        overflow: hidden;
+        position: relative;
+        width: 720px;
+        height: 220px;
+        border-radius: 37px;
+        background-color: #5ABB58;
+        outline: solid black 2px;
+        margin: 0 auto;
+    }
+
+    .ball {
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+    }
+
+
+
+    @keyframes ballAmination {
+        0% {
+            top: 50%;
+            left: 50%;
+        }
+
+        100% {}
+    }
+
+
+
+    .DivFelexBiggestNum {
+        display: flex;
+        justify-content: center;
+        gap: 38px;
+    }
+
+    .theLargest {
+        margin-top: 36px;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        padding-bottom: 36px;
+    }
+
+    .ourTeam {
+        text-align: center;
+    }
+
+    .rightBtn {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+    }
+
+    .tickRight {
+        width: 50px;
+    }
+
+    .DivFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .leftBtn {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        transform: rotate(180deg);
+    }
+
+    .imgTeam {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        background-color: #D9D9D9;
+        margin: 0 auto;
+    }
+
+    .blockFlex {
+        display: flex;
+        width: 100%;
+    }
+
+    .studentName {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+
+    .studentInfo {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    .navPhoto {
+        width: 18px;
+        height: 3px;
+        background-color: #D9D9D9;
+        border-radius: 3px;
+        border: none;
+        margin-bottom: 36px;
+    }
+
+    /* .photoLink {
+    width: 18px;
+    height: 3px;
+    background-color: #D9D9D9;
+    border-radius: 3px;
+
+} */
+
+    .orderedPhoto {
+        width: 30px;
+        background-color: #797979;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    .scientists {
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 577px;
+        row-gap: 36px;
+        column-gap: 59px;
+    }
+
+    .descriptionEinstain {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .scientistImages {
+        /* display: block; */
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        object-fit: cover;
+        color: #ffffff;
+    }
+
+    .moonType {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: #5abb5859; */
+        /* z-index: 15; */
+    }
+
+    .scientistImagesClickedEinstain {
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .scientistsLiClicked {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .liCategories {
+        /* width: 490px; */
+    }
+
+    .category {
+        color: #FFFFFF;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        border-radius: 20px;
+        border: none;
+        background-color: #000000;
+        box-shadow: 3px 3px 0 rgb(0, 0, 0, .25);
+        height: 35px;
+    }
+
+    .liCategories1 {
+        text-align: right;
+    }
+
+    .liCategories2 {
+        /* text-align: left; */
+    }
+
+    .nineteenCentuty {
+        width: 227px;
+    }
+
+    .einshtein {
+        width: 298px;
+    }
+
+    .alfabet {
+        width: 282px;
+    }
+
+    .leterS {
+        width: 441px;
+    }
+
+    .years {
+        width: 380px;
+    }
+
+    .dectroyA {
+        width: 375px;
+    }
+
+    .laterScietist {
+        width: 329px;
+    }
+
+    .theMostAndOposite {
+        height: 50px;
+        width: 368px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .sameletters {
+        width: 489px;
+    }
+
+    .categoriesUl {
+        width: 657px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 36px;
+        row-gap: 20px;
+        margin-top: 36px;
+        padding-bottom: 23px;
+    }
+
+    .liCategoriesLast {
+        /* text-align: center; */
+    }
+
+    footer {
+        height: 1440px;
+        height: 220px;
+        background-color: #FFFFFF;
+        display: flex;
+    }
+
+    .logoFooter {
+        width: 165px;
+        margin-right: 85px;
+        height: 70px;
+    }
+
+    .footerFlex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .linksFooter {
+        line-height: 170%;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .ulLinksFoot {
+        margin-right: 87px;
+    }
+
+    .interractiveLi {
+        position: relative;
+    }
+
+    .inpEmail {
+        width: 204px;
+        height: 35px;
+        background-color: #D7D7D7;
+        border-radius: 20px;
+        border: none;
+        padding-left: 20px;
+        color: #4e4e4e;
+    }
+
+    .inpEmail::placeholder {
+        color: #7E7E7E;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        padding: 20px;
+        padding-left: 0;
+    }
+
+    .formFoot {
+        display: flex;
+        gap: 36px;
+    }
+
+    .subscribe {
+        background-color: #000;
+        height: 35px;
+        width: 107px;
+        border-radius: 20px;
+        border: none;
+        color: #fff;
+
+    }
+
+    .notification {
+        font-size: 6px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 18px;
+    }
+
+    .toOverflow {
+        position: relative;
+        width: 720px;
+        height: 241px;
+        overflow: hidden;
+        /* margin-top: 200px; */
+        margin-left: 50%;
+        transform: translateX(-50%);
+        /* outline: solid red 2px; */
+    }
+
+    .bodyCircle {
+        width: 3584px;
+        height: 241px;
+        background-image: url(images/dino/DinoOneAgain1.png);
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 20px;
+
+        animation-name: none;
+        /* animation-name: circleExample; */
+        animation-iteration-count: infinite;
+        animation-duration: 3.5s;
+        animation-timing-function: linear;
+    }
+
+
+    .dinoWithoutLegs {
+        position: absolute;
+        top: 130px;
+        left: 50px;
+        width: 40px;
+        z-index: 2;
+        /* animation-name: none; */
+        /* animation-name: jumpBody; */
+        animation-duration: .4s;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1;
+        /* animation-play-state: paused; */
+    }
+
+    .rightFoot {
+        position: absolute;
+        width: 10px;
+        top: 165px;
+        left: 66.5px;
+        animation-name: none;
+        /* animation-name: rightStep; */
+        animation-duration: 200ms;
+        animation-timing-function: steps(2, start);
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .leftFoot {
+        position: absolute;
+        width: 7px;
+        top: 165px;
+        left: 60px;
+        animation-name: none;
+        /* animation-name: leftStep; */
+        animation-delay: 100ms;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: steps(2, start);
+        animation-iteration-count: infinite;
+    }
+
+    .imgsCactus {
+        position: absolute;
+        top: 135px;
+        z-index: 3;
+        /* animation-play-state: paused; */
+    }
+
+    .imgCactus1 {
+        display: none;
+        animation-name: cactusMoves;
+        animation-duration: 0.98s;
+        animation-timing-function: linear;
+        left: 750px;
+        /* left:  750px;
+    animation-name: cactusMoves;
+    animation-duration: 0.98s;
+    animation-timing-function: linear; */
+    }
+
+    .theEnd {
+        animation-play-state: paused;
+    }
+
+    /* .imgCactus2:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus3:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus4:hover {
+    animation-play-state: paused;
+}
+
+.imgCactus5:hover {
+    animation-play-state: paused;
+} */
+
+    .imgCactus2 {
+        display: none;
+        top: 145px;
+        animation-name: cactusMoves;
+        animation-duration: 0.98s;
+        animation-timing-function: linear;
+        left: 750px;
+    }
+
+    .imgCactus3 {
+        display: none;
+        top: 145px;
+        animation-name: cactusMoves;
+        animation-duration: 0.98s;
+        animation-timing-function: linear;
+        left: 750px;
+    }
+
+    .imgCactus4 {
+        display: none;
+        top: 145px;
+        animation-name: cactusMoves;
+        animation-duration: 0.98s;
+        animation-timing-function: linear;
+        left: 750px;
+    }
+
+    .imgCactus5 {
+        display: none;
+        animation-name: cactusMoves;
+        animation-duration: 0.98s;
+        animation-timing-function: linear;
+        left: 750px;
+    }
+
+    @keyframes rightStep {
+        0% {
+            top: 171px;
+        }
+
+        100% {
+            top: 158px;
+        }
+    }
+
+    @keyframes leftStep {
+        0% {
+            top: 171px;
+        }
+
+        100% {
+            top: 159px;
+        }
+    }
+
+
+    @keyframes circleExample {
+        0% {}
+
+        100% {
+            margin-left: -2864px;
+        }
+    }
+
+
+    @keyframes jumpBody {
+        0% {
+            top: 120px;
+            left: 38px;
+            width: 65px;
+        }
+
+        50% {
+            top: 55px;
+            left: 38px;
+            width: 65px;
+        }
+
+        100% {
+            top: 120px;
+            left: 38px;
+            width: 65px;
+        }
+    }
+
+    @keyframes rightFootJump {
+        0% {
+            top: 171px;
+        }
+
+        50% {
+            top: 90px;
+        }
+
+        100% {
+            top: 171px;
+        }
+    }
+
+    @keyframes cactusMoves {
+        0% {
+            left: 750px;
+            display: block;
+        }
+
+        100% {
+            left: -70px;
+        }
+    }
+
+    .toPlayAgain {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.295);
+    }
+
+    .ulosed {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+
+        /* width: ; */
+        /* height: 100%; */
+        /* background-color: rgba(0, 0, 0, 0.295); */
+    }
+
+    .playagain {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* margin-top: 120.5px; */
+        /* transform: translate(-50%, -50%); */
+        /* margin-left: 350px; */
+
+
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.562);
+        border: none;
+        padding: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 19;
+    }
 }
 
 /* 
