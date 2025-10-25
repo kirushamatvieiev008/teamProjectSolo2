@@ -673,7 +673,7 @@ equalBtn.addEventListener("click", (event) => {
   const secondNum = inputSecondNum.value;
   if (plus) {
     result.textContent = Number(firstNum) + Number(secondNum);
-    // console.log(firstNum + secondNum);
+    result.style.color = 'black';
   } else if (minus) {
     result.textContent = Number(firstNum) - Number(secondNum);
     // console.log(firstNum - secondNum);
