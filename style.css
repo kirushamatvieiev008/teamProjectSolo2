@@ -466,6 +466,16 @@ header {
     padding-bottom: 36px;
 }
 
+.DivFelex_Sec3 {
+    max-width: 576px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* transform: translateX(-50%); */
+    align-items: center;
+    padding-bottom: 36px;
+}
+
 .DivFelexHeader {
     display: flex;
     /* flex-wrap: wrap; */
@@ -653,8 +663,11 @@ h3 {
     width: 256px;
     height: 60px;
     /* margin-left: 435px; */
-    justify-content: space-between;
-    margin-right: 104px;
+    /* justify-content: space-between; */
+    gap: 38px;
+    /* margin-right: 104px; */
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .imgsGame3 {
@@ -762,7 +775,7 @@ h3 {
 .divCulcTime {
     justify-content: space-around;
     margin: 0 auto;
-    width: 458px;
+    width: 458px; 
     display: flex;
     align-items: center;
     margin-bottom: 36px;
@@ -1918,6 +1931,16 @@ footer {
         padding-bottom: 36px;
     }
 
+    .DivFelex_Sec3 {
+        max-width: 576px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        /* transform: translateX(-50%); */
+        align-items: center;
+        padding-bottom: 36px;
+    }
+
     .DivFelexHeader {
         display: flex;
         align-items: center;
@@ -2001,7 +2024,8 @@ footer {
     }
 
     .line {
-        width: 536px;
+        max-width: 536px;
+        margin-inline: 70px;
         height: 1px;
         margin: 0 auto;
         background-color: #000000;
@@ -2086,7 +2110,7 @@ footer {
 
     .formGuess {
         display: flex;
-        margin-right: 202px;
+        /* margin-right: 202px; */
         /* margin-left: 275px; */
         /* margin-left: 15%; */
     }
@@ -2101,7 +2125,7 @@ footer {
         height: 60px;
         /* margin-left: 435px; */
         justify-content: space-between;
-        margin-right: 104px;
+        /* margin-right: 104px; */
     }
 
     .imgsGame3 {
@@ -2209,7 +2233,8 @@ footer {
     .divCulcTime {
         justify-content: space-around;
         margin: 0 auto;
-        width: 458px;
+        /* width: 458px; */
+        width: fit-content;
         display: flex;
         align-items: center;
         margin-bottom: 36px;
@@ -2558,6 +2583,7 @@ footer {
         font-weight: 400;
         font-style: normal;
         padding-top: 18px;
+        padding-bottom: 20px;
     }
 
     .toOverflow {
@@ -2869,6 +2895,24 @@ footer {
 
 @media (max-width: 900px) {
 
+    .DivFelex_Sec3 {
+        /* width: 576px; */
+        padding-inline: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        /* transform: translateX(-50%); */
+        padding-bottom: 15px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .divCulcTime {
+        flex-direction: column;
+    }
+
     .DivFelexHeader {
         display: flex;
         align-items: center;
@@ -2889,7 +2933,8 @@ footer {
     }
 
     .line {
-        max-width: 300px;
+        max-width: 500px;
+        /* margin-inline: 50px; */
     }
 
     .DivFelexBiggestNum {
@@ -2910,6 +2955,9 @@ footer {
 
     .game3Ul {
         margin-right: 0;
+        margin-left: 0;
+        /* margin: 0 auto; */
+        transform: translateX(0);
     }
 
     .gameCulc {
@@ -2963,6 +3011,38 @@ footer {
 }
 
 @media (max-width: 715px) {
+    .sameletters {
+        width: 300px;
+        height: 50px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .DivFelex_Sec1 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .liCategories {
+        width: auto;
+    }
+
+    .leterS {
+        width: 250px;
+
+        height: 50px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .years {
+        width: 280px;
+        height: 50px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+
     .DivFelexHeader {
         display: flex;
         flex-wrap: wrap;
@@ -2978,9 +3058,14 @@ footer {
         margin-right: 40px;
         gap: 15px;
     }
+
+    .line {
+        max-width: 500px;
+        margin-inline: 50px;
+    }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 656px) {
     .DivFelexHeader {
         display: flex;
         flex-wrap: wrap;
@@ -2991,11 +3076,12 @@ footer {
         width: 100%;
         text-align: center;
     }
-    
+
     /* .ulNavig {
         margin-right: 40px;
     } */
 }
+
 /* 
 .montserrat-alternates-regular {
   font-family: "Montserrat Alternates", sans-serif;
@@ -3004,7 +3090,7 @@ footer {
   }
   
   */
-  
+
 /* 
 .inter-<uniquifier> {
     font-family: "Inter", sans-serif;
