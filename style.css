@@ -645,6 +645,7 @@ h3 {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
+    white-space: nowrap;
 }
 
 .formGuess {
@@ -680,6 +681,7 @@ h3 {
     font-weight: 400;
     font-style: normal;
     line-height: 170%;
+    white-space: nowrap;
 }
 
 .checlCPVariant {
@@ -775,7 +777,7 @@ h3 {
 .divCulcTime {
     justify-content: space-around;
     margin: 0 auto;
-    width: 458px; 
+    width: 458px;
     display: flex;
     align-items: center;
     margin-bottom: 36px;
@@ -3081,6 +3083,118 @@ footer {
         margin-right: 40px;
     } */
 }
+
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    header {
+        height: fit-content;
+    }
+
+    .DivFelexHeader {
+        padding-top: 90px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        z-index: 5;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .hello {
+        margin: 0;
+    }
+
+    .logoHeader {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
+
+    .sunOrNight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+    }
+
+    .ulNavig {
+        background-color: #ffffff00;
+        padding: 0;
+        margin: 0;
+    }
+
+    .formFoot {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .nineteenCentuty {
+        width: 180px;
+    }
+
+    .einshtein {
+        width: 160px;
+        height: 50px;
+    }
+
+    .alfabet {
+        width: 190px;
+        height: 50px;
+    }
+
+    .years {
+        height: 75px;
+        width: 160px;
+        padding: 0;
+    }
+
+    .dectroyA {
+        width: 185px;
+        height: 50px;
+    }
+
+    .laterScietist {
+        width: 165px;
+        height: 50px;
+    }
+
+    .theMostAndOposite {
+        width: 180px;
+        height: 75px;
+        padding: 0;
+    }
+
+    .sameletters {
+        width: 190px;
+        height: 75px;
+        padding: 0;
+    }
+
+    .leterS {
+        padding: 0;
+    }
+}
+
+
 
 /* 
 .montserrat-alternates-regular {

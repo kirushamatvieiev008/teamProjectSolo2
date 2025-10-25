@@ -64,71 +64,53 @@ const dinoBody = document.querySelector(".dinoWithoutLegs");
 const toPlayAgainDiv = document.querySelector(".toPlayAgain");
 const ulosedText = document.querySelector(".ulosed");
 const playagainBtn = document.querySelector(".playagain");
-const footballPeech = document.querySelector('.peech');
-const footballBall = document.querySelector('.ball');
-const inpRegistration = document.querySelector('.inpEmail');
-const subscribe = document.querySelector('.subscribe');
-// const moonTypeBack = document.querySelector('.moonType');
+const footballPeech = document.querySelector(".peech");
+const footballBall = document.querySelector(".ball");
+const inpRegistration = document.querySelector(".inpEmail");
+const subscribe = document.querySelector(".subscribe");
+// const moonTypeBack = documet.querySelector('.moonType');
 
 // body.scrollHeight
 
 // moonTypeBack.style.height = `${body.scrollY}`;
 // moonType.style.height = `${body.scrollHeight}px`;
 
-
-subscribe.addEventListener('click', event => {
+subscribe.addEventListener("click", (event) => {
   event.preventDefault();
 
   const userEmail = inpRegistration.value;
 
-  if (userEmail.includes('@') && userEmail.includes('.')) {
+  if (userEmail.includes("@") && userEmail.includes(".")) {
     alert(`your email: ${userEmail}`);
-    
   }
 });
 
-
 const coordinatesPeech = footballPeech.getBoundingClientRect();
+console.log(coordinatesPeech.top);
 
-footballPeech.addEventListener('click', event => {
-  const topPeech = coordinatesPeech.top;
-  console.log(`peech: ${topPeech}`);
-  const clientOnY = event.pageY;
-  console.log(`client: ${clientOnY}`);
-  const top = clientOnY - topPeech;
-  console.log(top);
-  
-    footballBall.style.top = `${top}px`;
-  
+footballPeech.addEventListener("click", (event) => {
+  const coordinatesPeechinside = footballPeech.getBoundingClientRect();
+  const windowH = window.innerHeight;
+  const clienty = event.y;
+  let topReal = clienty - coordinatesPeechinside.top;
+  footballBall.style.top = `${topReal}px`;
 
-  // const heightOfSite = window.innerHeight;
-  // const heightSiteWithoutPeech = heightOfSite - footballPeech.clientHeight;
-  // const heightSiteWithoutPeechDel2 = heightSiteWithoutPeech / 2;
-  // const heightWidthWithoutRightSide = footballPeech.clientHeight + heightSiteWithoutPeechDel2;
-
-
-
-
-  // for left
   const clientOnx = event.clientX;
   const widthOfSite = window.innerWidth;
   const widthSiteWithoutPeech = widthOfSite - footballPeech.clientWidth;
   const widthSiteWithoutPeechDel2 = widthSiteWithoutPeech / 2;
-  const bodyWidthWithoutRightSide = footballPeech.clientWidth + widthSiteWithoutPeechDel2;
-  
-  if (widthSiteWithoutPeechDel2 < clientOnx && clientOnx < bodyWidthWithoutRightSide) {
+  const bodyWidthWithoutRightSide =
+    footballPeech.clientWidth + widthSiteWithoutPeechDel2;
+
+  if (
+    widthSiteWithoutPeechDel2 < clientOnx &&
+    clientOnx < bodyWidthWithoutRightSide
+  ) {
     const left = clientOnx - widthSiteWithoutPeechDel2;
     footballBall.style.left = `${left}px`;
-
   }
-  // console.log(clientOnx);
-  
-  // footballBall.x = clientOnx;
-  // footballBall.y = clientOny;
 
-
-  
-})
+});
 
 let positionDino;
 
@@ -139,7 +121,7 @@ const loseTop = (value, stateDinoPositionY) => {
 
     if (dinoBody.y > stateDinoPositionY - 50) {
       console.log(dinoBody.y);
-      
+
       dinoBody.style.animationName = "none";
       rightFootDino.style.animationName = "none";
       leftFootDino.style.animationName = "none";
@@ -150,21 +132,11 @@ const loseTop = (value, stateDinoPositionY) => {
       value.classList.add("theEnd");
     }
 
-    // if (dinoBody.y === 138) {
-    //   dinoBody.style.animationName = "none";
-    //   rightFootDino.style.animationName = "none";
-    //   leftFootDino.style.animationName = "none";
-    //   landDino.style.animationName = "none";
-    //   toPlayAgainDiv.style.display = "block";
-    //   ulosedText.style.display = "block";
-    //   playagainBtn.style.display = "block";
-    //   value.classList.add("theEnd");
-    //   // console.log(value.animationPlayState);
-    // }
+
   }, 821);
 };
- // 232
-    // console.log(document.dinoBody.y); // 217
+// 232
+// console.log(document.dinoBody.y); // 217
 
 let cactusGlobal = true;
 
@@ -178,8 +150,8 @@ function none(value, stateDinoPositionY) {
     // console.log(document.dinoBody.y); // 217
 
     if (dinoBody.y === stateDinoPositionY - 15) {
-      console.log('it works');
-      
+      console.log("it works");
+
       dinoBody.style.animationName = "none";
       rightFootDino.style.animationName = "none";
       leftFootDino.style.animationName = "none";
@@ -219,12 +191,11 @@ function none(value, stateDinoPositionY) {
 
 // };
 
-
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
     event.preventDefault();
     console.log(dinoBody.y);
-    
+
     if (toPlayAgainDiv.style.display !== "block") {
       cactuses.forEach((cactus) => {
         cactus.style.display = "none";
@@ -280,7 +251,7 @@ document.addEventListener("keydown", (event) => {
         // console.log(none(cactuses[whichCactus - 1]));
         // positionDino = cactuses[whichCactus - 1].y;
         // console.log(positionDino);
-        
+
         none(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
         loseTop(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
         // if (none(cactuses[whichCactus - 1])) {
@@ -711,6 +682,9 @@ equalBtn.addEventListener("click", (event) => {
     // console.log(firstNum * secondNum);
   } else if (slash) {
     result.textContent = Number(firstNum) / Number(secondNum);
+    if (result.textContent.length > 6) {
+      
+    }
     // console.log(firstNum / secondNum);
   }
 
