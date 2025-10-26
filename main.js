@@ -90,7 +90,6 @@ console.log(coordinatesPeech.top);
 
 footballPeech.addEventListener("click", (event) => {
   const coordinatesPeechinside = footballPeech.getBoundingClientRect();
-  const windowH = window.innerHeight;
   const clienty = event.y;
   let topReal = clienty - coordinatesPeechinside.top;
   footballBall.style.top = `${topReal}px`;
