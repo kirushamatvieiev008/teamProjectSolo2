@@ -631,7 +631,7 @@ h3 {
 }
 
 .congratulations {
-    color: #039900;
+    color: #5e5e5e;
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
@@ -640,7 +640,7 @@ h3 {
 }
 
 .uBorn {
-    color: #039900;
+    color: #5e5e5e;
     font-size: 12px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
@@ -653,6 +653,10 @@ h3 {
     /* margin-right: 202px; */
     /* margin-left: 275px; */
     /* margin-left: 15%; */
+}
+
+.dots {
+    white-space: nowrap;
 }
 
 .inpSec2 {

@@ -868,22 +868,22 @@ lupaTime.addEventListener("click", (event) => {
   if (allMinutes > 60) {
     hours = parseInt(allMinutes / 60);
     minutes = allMinutes - hours * 60;
-    result = `hours: ${hours}, minutes: ${minutes}`;
+    result = `годин: ${hours}, хв: ${minutes}`;
   }
   if (hours > 23) {
     days = parseInt(hours / 24);
     hours = hours - days * 24;
-    result = `days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+    result = `днів: ${days}, годин: ${hours}, хв: ${minutes}`;
   }
   if (days > 30) {
     month = parseInt(days / 30);
     days = days - month * 30;
-    result = `months: ${month}, days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+    result = `місяців: ${month}, днів: ${days}, годин: ${hours}, хв: ${minutes}`;
   }
   if (month > 12) {
     years = parseInt(month / 12);
     month = month - years * 12;
-    result = `years: ${years}, months: ${month}, days: ${days}, hours: ${hours}, minutes: ${minutes}`;
+    result = `років: ${years}, місяців: ${month}, днів: ${days}, годин: ${hours}, хв: ${minutes}`;
   }
 
   time.textContent = result;
