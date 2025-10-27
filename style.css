@@ -1696,7 +1696,7 @@ footer {
     }
 
     .helloBlock {
-        width: 576px;
+        max-width: 576px;
         height: 316px;
         border-radius: 20px;
         background-color: #fff;
@@ -3081,6 +3081,54 @@ footer {
         z-index: 5;
         width: 100%;
         text-align: center;
+    }
+
+    .blur {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.267);
+        z-index: 10;
+        position: absolute;
+    }
+
+    .helloBlock {
+        max-width: 376px;
+        height: 316px;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .introtext {
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+    }
+
+    .enterName {
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+
+    .thankBlock {
+        display: none;
+        width: 263px;
+        height: 245px;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .thanks {
+        margin-top: 110px;
     }
 
     /* .ulNavig {
