@@ -68,12 +68,6 @@ const footballPeech = document.querySelector(".peech");
 const footballBall = document.querySelector(".ball");
 const inpRegistration = document.querySelector(".inpEmail");
 const subscribe = document.querySelector(".subscribe");
-// const moonTypeBack = documet.querySelector('.moonType');
-
-// body.scrollHeight
-
-// moonTypeBack.style.height = `${body.scrollY}`;
-// moonType.style.height = `${body.scrollHeight}px`;
 
 subscribe.addEventListener("click", (event) => {
   event.preventDefault();
@@ -86,7 +80,6 @@ subscribe.addEventListener("click", (event) => {
 });
 
 const coordinatesPeech = footballPeech.getBoundingClientRect();
-console.log(coordinatesPeech.top);
 
 footballPeech.addEventListener("click", (event) => {
   const coordinatesPeechinside = footballPeech.getBoundingClientRect();
@@ -108,18 +101,14 @@ footballPeech.addEventListener("click", (event) => {
     const left = clientOnx - widthSiteWithoutPeechDel2;
     footballBall.style.left = `${left}px`;
   }
-
 });
 
 let positionDino;
 
 const loseTop = (value, stateDinoPositionY) => {
   setTimeout(() => {
-    console.log(value.x);
-    console.log(dinoBody.x);
 
     if (dinoBody.y > stateDinoPositionY - 50) {
-      console.log(dinoBody.y);
 
       dinoBody.style.animationName = "none";
       rightFootDino.style.animationName = "none";
@@ -130,26 +119,14 @@ const loseTop = (value, stateDinoPositionY) => {
       playagainBtn.style.display = "block";
       value.classList.add("theEnd");
     }
-
-
   }, 821);
 };
-// 232
-// console.log(document.dinoBody.y); // 217
 
 let cactusGlobal = true;
 
-// const againFunc = () => {};
-
 function none(value, stateDinoPositionY) {
   setTimeout(() => {
-    // console.log(`${stateDinoPositionY}, y state`);
-    //     console.log(`${dinoBody.y}, y jumped`);
-    // console.log(document.value.y); // 232
-    // console.log(document.dinoBody.y); // 217
-
     if (dinoBody.y === stateDinoPositionY - 15) {
-      console.log("it works");
 
       dinoBody.style.animationName = "none";
       rightFootDino.style.animationName = "none";
@@ -159,41 +136,13 @@ function none(value, stateDinoPositionY) {
       ulosedText.style.display = "block";
       playagainBtn.style.display = "block";
       value.classList.add("theEnd");
-      // console.log(value.animationPlayState);
     }
   }, 800);
 }
 
-// const funcLogLeft = (value) => {
-//   setTimeout(() => {
-//     console.log(value.x);
-//     console.log(dinoBody.x);
-
-//     if (dinoBody.y === 138) {
-//       return true;
-//     }
-//   }, 840);
-// let i = 0;
-// console.log(value.x);
-
-// while (i !== 1) {
-//   setTimeout(() => {
-//     console.log('smth');
-
-//     if (value.x < 800) {
-//       console.log('cactus is less than 800');
-//       i = 10000;
-//     }
-//     i += 1;
-//   }, 1000)
-// };
-
-// };
-
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
     event.preventDefault();
-    console.log(dinoBody.y);
 
     if (toPlayAgainDiv.style.display !== "block") {
       cactuses.forEach((cactus) => {
@@ -203,21 +152,7 @@ document.addEventListener("keydown", (event) => {
         cactus.style.display = "none";
       });
       setTimeout(() => {
-        console.log(dinoBody.y);
       }, 200);
-
-      console.log(dinoBody.x, dinoBody.y);
-
-      // if (cactuses[whichCactus - 1].style.dislay === 'block' && cactuses[whichCactus - 1].x === 798) {
-      //   if (dinoBody.getAttribute('src') === "dinoWithLegs.png") {
-      //   setTimeout(() => {
-      //     console.log(dinoBody.y);
-
-      //   }, 200)
-      //   }
-      // }
-
-      // dinoWithLegs.png
 
       const timeDelay = Math.round(Math.random() * (2000 - 300) + 1);
       const whichCactus = Math.round(Math.random() * (4 - 0) + 1);
@@ -238,8 +173,6 @@ document.addEventListener("keydown", (event) => {
         leftFootDino.style.display = "block";
       }, 400);
 
-      console.log(whichCactus);
-
       cactuses.forEach((cactus) => {
         cactus.style.display = "none";
       });
@@ -247,18 +180,8 @@ document.addEventListener("keydown", (event) => {
       setTimeout(() => {
         cactuses[whichCactus - 1].style.display = "block";
         cactusGlobal = cactuses[whichCactus - 1];
-        // console.log(none(cactuses[whichCactus - 1]));
-        // positionDino = cactuses[whichCactus - 1].y;
-        // console.log(positionDino);
-
         none(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
         loseTop(cactuses[whichCactus - 1], cactuses[whichCactus - 1].y);
-        // if (none(cactuses[whichCactus - 1])) {
-        //   dinoBody.style.animationName = "none";
-        //   rightFootDino.style.animationName = "none";
-        //   leftFootDino.style.animationName = "none";
-        //   landDino.style.animationName = "none";
-        // }
       }, timeDelay);
     }
   }
@@ -271,68 +194,8 @@ playagainBtn.addEventListener("click", (event) => {
   ulosedText.style.display = "none";
   cactuses.forEach((cactus) => {
     cactus.classList.remove("theEnd");
-    // cactuses.style.display = 'none';
   });
 });
-
-// while(cactusGlobal) {
-//   console.log(cactusGlobal.x);
-
-// }
-// console.log("smth");
-
-// landDino.style.animationName = "none";
-// rightFootDino.style.animationName = "none";
-// leftFootDino.style.animationName = "none";
-// // rightFootDino.style.display = "block";
-// // leftFootDino.style.display = "block";
-// dinoBody.style.animationName = "none";
-
-// document.addEventListener("keydown", (event) => {
-//   event.preventDefault();
-//   console.log(event.code);
-//   dinoBody.setAttribute("src", "dinoWithoutLegs.png");
-//   rightFootDino.style.display = "block";
-//   leftFootDino.style.display = "block";
-
-//   if (event.code === "Space") {
-//     const randomTime = Math.round(Math.random() * (2000 - 1000) + 10);
-//     const randomCactus = Math.round(Math.random() * (4 - 1) + 1);
-
-//     cactuses.forEach(cactusIter => {
-//       cactusIter.style.animationName = 'none';
-//     });
-
-//     cactuses[randomCactus].style.animationName = 'cactusMoves';
-
-//     if (cactuses[randomCactus].style.left === '250px') {
-
-//     }
-
-//     rightFootDino.style.animationName = "rightStep";
-//     leftFootDino.style.animationName = "leftStep";
-//     landDino.style.animationName = "circleExample";
-
-//     rightFootDino.style.display = "none";
-//     leftFootDino.style.display = "none";
-//     dinoBody.setAttribute("src", "dinoWithLegs.png");
-//     dinoBody.style.animationName = "jumpBody";
-//   }
-
-//   setTimeout(() => {
-//     dinoBody.setAttribute("src", "dinoWithoutLegs.png");
-//     rightFootDino.style.display = "block";
-//     leftFootDino.style.display = "block";
-//     dinoBody.style.animationName = "none";
-//   }, 380);
-//   if (landDino.style.animationName === "circleExample") {
-//     // const typeCactus = Math.round(Math.random() * (4 - 0) + 1);
-//     cactuses.forEach((cactus) => {
-//       cactus.style.display = "none";
-//       cactuses[typeCactus].style.display = "block";
-//     });
-//   }
-// });
 
 applyBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -409,7 +272,6 @@ const arraySects = [
 const toSettingPage = (secNums, value) => {
   arraySects.forEach((section) => {
     section.name.style.display = "none";
-    console.log(section.name);
   });
 
   secNums.forEach((typeSection) => {
@@ -419,7 +281,6 @@ const toSettingPage = (secNums, value) => {
   if (
     arraySects[secNums.at(-1) - 1].name.lastElementChild.classList[0] === "line"
   ) {
-    console.log(arraySects[secNums.at(-1) - 1].name.lastElementChild.classList);
 
     arraySects[secNums.at(-1) - 1].name.lastElementChild.remove();
   }
@@ -470,48 +331,6 @@ gessNumBtn.addEventListener("click", (event) => {
     }
   }
 });
-
-// game 3
-
-// let counterWins = 0;
-// let counterLoses = 0;
-// let counterDraws = 0;
-
-// variantPcGame3.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const cpOrder = Math.round(Math.random() * (3 - 1) + 1);
-//   if (cpOrder === 1) {
-//     pcVar1.style.display = "block";
-//     pcVar2.style.display = "none";
-//     pcVar3.style.display = "none";
-//   } else if (cpOrder === 2) {
-//     pcVar1.style.display = "none";
-//     pcVar2.style.display = "block";
-//     pcVar3.style.display = "none";
-//   } else {
-//     pcVar1.style.display = "none";
-//     pcVar2.style.display = "none";
-//     pcVar3.style.display = "block";
-//   }
-// });
-
-// userOrderRock.addEventListener('click', event => {
-//   event.preventDefault();
-
-// })
-
-// сделать каунтеры в глобальном поле зрении, каунтеры нажатых кнопок (ножницы, камень, бумага)
-// написать логику если какаято кнопка была нажата то каунтер + 1
-// если кнопка была нажата то внутри слушателя событий прописать переменную с рандомным числом
-//  а так же проверку что сравнивает между собой числа если число которое загадал человек равно 1 (камень)
-//  то в таком случае если компьютер выбрал число 2, человек выграл победа +=1, если компьютер выбрал число
-//  3 то человек проиграл проигрыш += 1 если компьютер выбрал число 1 то ничья += 1
-// сделать такие дейвствия в каждом слушателе,
-
-// создать 3 перемены выбор пк1, 3 переменные выбор пк2, в первые три перемены будут плюсаваться
-//  те выборы которые делал пк в первом слушателе во вторые будет перезаписываться, а именно по
-// умолчания для последних 3 перемен значение 0, и дальше в слушателе от первых перемен будем отнимать
-// вторые перемены и потом вторые переменые перезаписывать на первые
 
 let rock1 = 0;
 let scissors1 = 0;
@@ -672,19 +491,26 @@ equalBtn.addEventListener("click", (event) => {
   const secondNum = inputSecondNum.value;
   if (plus) {
     result.textContent = Number(firstNum) + Number(secondNum);
-    result.style.color = 'black';
+    inputFirstNum.style.backgroundColor = "#D7D7D7";
+    inputSecondNum.style.backgroundColor = "#D7D7D7";
+    result.style.color = "black";
   } else if (minus) {
     result.textContent = Number(firstNum) - Number(secondNum);
-    // console.log(firstNum - secondNum);
+    inputFirstNum.style.backgroundColor = "#D7D7D7";
+    inputSecondNum.style.backgroundColor = "#D7D7D7";
   } else if (up) {
     result.textContent = Number(firstNum) * Number(secondNum);
-    // console.log(firstNum * secondNum);
+    inputFirstNum.style.backgroundColor = "#D7D7D7";
+    inputSecondNum.style.backgroundColor = "#D7D7D7";
   } else if (slash) {
-    result.textContent = Number(firstNum) / Number(secondNum);
-    if (result.textContent.length > 6) {
-      
+    if (Number(secondNum) !== 0) {
+      result.textContent = Number(firstNum) / Number(secondNum);
+      inputFirstNum.style.backgroundColor = "#D7D7D7";
+      inputSecondNum.style.backgroundColor = "#D7D7D7";
+    } else {
+      inputSecondNum.style.backgroundColor = "red";
+      result.textContent = `ділення на нуль!`;
     }
-    // console.log(firstNum / secondNum);
   }
 
   plus = false;
@@ -697,11 +523,6 @@ equalBtn.addEventListener("click", (event) => {
   minusBtn.style.opacity = "1";
   slashBtn.style.opacity = "1";
 });
-
-// const gallery = document.querySelector(".gallery");
-// const nextBtn = document.querySelector(".next");
-// const previousBtn = document.querySelector(".previous");
-// const totalLi = galarySlider.childElementCount;
 
 const galarySlider = document.querySelector(".galarySlider");
 const leftBtnSlider = document.querySelector(".leftBtn");
@@ -718,13 +539,9 @@ const funcSlider = (index, value) => {
   let count = 0;
   liPhotosAllSlider.forEach((liImg) => {
     liImg.style.display = "none";
-    // divAll[count].classList.add('photoLink');
-    // divAll[count].classList.remove('photoLink');
     count += 1;
   });
   liPhotosAllSlider[index].style.display = value;
-  // divAll.classList.remove('orderedPhoto');
-  // console.log(index);
 };
 let counterForward = 0;
 rightBtnSlider.addEventListener("click", (event) => {
@@ -745,11 +562,8 @@ rightBtnSlider.addEventListener("click", (event) => {
 leftBtnSlider.addEventListener("click", (event) => {
   event.preventDefault();
   counterForward -= 1;
-  // divAll[counterForward].classList.add("orderedPhoto");
-  // divAll[counterForward + 1].classList.remove("orderedPhoto");
   if (counterForward === -1) {
     counterForward = liPhotosAllSlider.length - 1;
-    // divAll[counterForward].classList.add("orderedPhoto");
     buttonAll[0].classList.remove("orderedPhoto");
   }
   if (counterForward > 0 && counterForward < liPhotosAllSlider.length - 1) {
@@ -767,8 +581,6 @@ leftBtnSlider.addEventListener("click", (event) => {
   funcSlider(counterForward, "block");
 });
 
-// console.log(liPhotosAllSlider.length);
-
 const funcButtonClick = (buttons, numOfBtn) => {
   buttons.forEach((button) => {
     button.classList.remove("orderedPhoto");
@@ -780,40 +592,29 @@ const funcButtonClick = (buttons, numOfBtn) => {
 
 sec9.addEventListener("click", (event) => {
   event.preventDefault();
-  // console.log(event.target.classList);
 
   if (event.target.classList[1] === "navPhoto1") {
     counterForward = 0;
     funcButtonClick(buttonAll, counterForward);
-
-    // console.log('it is nac 1 photo!');
-    // buttonAll[counterForward].classList.add("orderedPhoto");
   } else if (event.target.classList[1] === "navPhoto2") {
-    // console.log('it is not');
     counterForward = 1;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto3") {
-    // console.log('it is not');
     counterForward = 2;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto4") {
-    // console.log('it is not');
     counterForward = 3;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto5") {
-    // console.log('it is not');
     counterForward = 4;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto6") {
-    // console.log('it is not');
     counterForward = 5;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto7") {
-    // consolcounterForward = 0;e.log('it is not');
     counterForward = 6;
     funcButtonClick(buttonAll, counterForward);
   } else if (event.target.classList[1] === "navPhoto8") {
-    // console.log('it is not');
     counterForward = 7;
     funcButtonClick(buttonAll, counterForward);
   }
@@ -886,8 +687,6 @@ lupaTime.addEventListener("click", (event) => {
   }
 
   time.textContent = result;
-
-  // console.log(`hours: ${parseInt(inputTime.value / 60)}`);
 });
 
 const categoriesUl = document.querySelector(".categoriesUl");
@@ -993,31 +792,15 @@ const scientists = [
   },
 ];
 
-// const funcScientists = (check, value) => {
-//   scientistsImages.forEach(scientist => {
-//     scientist.style.display = 'none';
-//   });
-
-//   scientistsImages.forEach(scientist => {
-//     if (check) {
-//       scientistsImages[scientists.indexOf(scientist)].style.display = value;
-//     }
-//   });
-
-// };
-
 const scientistsUl = document.querySelector(".scientists");
 
 sec10.addEventListener("click", (event) => {
   event.preventDefault();
 
-  console.log(event.target.classList);
-
   if (event.target.classList[1] === "nineteenCentuty") {
     let scientistsArray = [];
     scientists.forEach((scientist) => {
       if (scientist.born < 1901 && scientist.born > 1800) {
-        // scientistsLi[scientists.indexOf(scientist)].style.display = "block";
         scientistsArray.push(`<li class="scientistsLi">
               <img
                 class="scientistImages"
@@ -1077,7 +860,6 @@ sec10.addEventListener("click", (event) => {
       const lowercased = scientistArr.name.toLowerCase();
       const nameArr = lowercased.split("");
       if (nameArr[0] === "s") {
-        console.log("letter s!");
 
         arrLisWithS.push(`<li class="scientistsLi">
               <img
@@ -1087,30 +869,25 @@ sec10.addEventListener("click", (event) => {
               />
             </li>`);
       }
-      console.log(arrLisWithS.join(""));
 
       scientistsUl.innerHTML = arrLisWithS.join("");
     });
   } else if (event.target.classList[1] === "years") {
-    console.log("after opening if it works");
 
     let arrayYears = [];
     let arrayHtmlInner = [];
 
     scientists.forEach((scientistArr) => {
       arrayYears.push(scientistArr.dead - scientistArr.born);
-      console.log("after opening if it works");
+
     });
     arrayYears.sort().reverse();
 
     let i = 0;
     while (i !== scientists.length) {
-      console.log("after opening if it works");
       scientists.forEach((scientistArr) => {
-        console.log("after opening if it works");
         let max = scientistArr.dead - scientistArr.born;
         if (max === arrayYears[i]) {
-          console.log("after opening if it works");
           arrayHtmlInner.push(`<li class="scientistsLi">
               <img
                 class="scientistImages"
@@ -1122,14 +899,12 @@ sec10.addEventListener("click", (event) => {
         }
       });
     }
-    console.log(arrayHtmlInner.join(""));
 
     scientistsUl.innerHTML = arrayHtmlInner.join("");
   } else if (event.target.classList[1] === "dectroyA") {
     let scientistsArr = [];
     scientists.forEach((scientistArr) => {
       let splitedName = scientistArr.name.toLowerCase().split("");
-      console.log(splitedName);
 
       if (splitedName[0] !== "a") {
         scientistsArr.push(`<li class="scientistsLi">
@@ -1163,8 +938,6 @@ sec10.addEventListener("click", (event) => {
       }
     });
   } else if (event.target.classList[1] === "theMostAndOposite") {
-    // let maxYear = 0;
-    // let minYear = 0;
     let maxYearsArr = [];
     let arrayScientists = [];
 
@@ -1214,162 +987,3 @@ sec10.addEventListener("click", (event) => {
     scientistsUl.innerHTML = arrayScientists.join("");
   }
 });
-
-// console.log(inutsBiggestNum);
-
-// inutsBiggestNum[2].addEventListener('click', event => {
-//   event.preventDefault();
-
-//   console.log('it works');
-
-// })
-
-// let counterForward = 1;
-// // let counterBack = counterForward - 1;
-
-// rightBtnSlider.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   // lis[counterForward].style.display = "block";
-//   // lis[counterForward - 1].style.display = "none";
-//   // lis[totalPhotos - 1].style.display = "none";
-//   console.log("no check listener 1");
-
-//   if (counterForward > 0 && counterForward < 7) {
-//     console.log('if 1');
-//     lis[0].style.display = "none";
-//   counterForward += 1;
-//     lis[counterForward].style.display = "block";
-//     lis[counterForward - 1].style.display = "none";
-//   }
-//   // counterForward += 1;
-
-//   if (counterForward === lis.length - 1) {
-//     console.log('if2');
-//     counterForward = 0;
-
-//     lis[counterForward].style.display = "block";
-//     lis[lis.length - 1].style.display = "none";
-
-//   }
-
-// });
-
-// galarySlider.firstElementChild.style.display = "block";
-// let counter = 2;
-// let counterBack;
-// const liLast = document.querySelector(`.liPhoto${totalPhotos}`);
-
-// rightBtnSlider.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const liAcc = document.querySelector(`.liPhoto${counter}`);
-//   const previousLi = document.querySelector(`.liPhoto${counter - 1}`);
-//   liLast.style.display = "none";
-//   if (counter === 1) {
-//     console.log("if right", counter);
-
-//     liAcc.style.display = "block";
-//     liLast.style.display = "none";
-//   } else if (counter === totalPhotos) {
-//     liAcc.style.display = "block";
-//     previousLi.style.display = "none";
-//     // console.log('else if sec', counter);
-//     // console.log(counter, 'last else if right');
-//     counter = 0;
-//     counterBack = totalPhotos;
-//   } else if (counter > 1) {
-//     console.log("else if right", counter);
-
-//     previousLi.style.display = "none";
-//     liAcc.style.display = "block";
-//   }
-//   // if (counter === totalPhotos) {
-//   //   console.log('if2 right', counter);
-
-//   //   // liAcc.style.display = "block";
-//   //   // previousLi.style.display = "none";
-//   // }
-//   counter += 1;
-//   counterBack = counter - 1;
-//   // else if (counterBack === 0) {
-//   //   counterBack = totalPhotos;
-//   // }
-// });
-
-// // console.log(liLast);
-
-// leftBtnSlider.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const liAcc = document.querySelector(`.liPhoto${counterBack}`);
-//   const previousLi = document.querySelector(`.liPhoto${counter}`);
-//   counter -= 1;
-//   // liLast.style.display = "none";
-//   if (counterBack === 1) {
-//     console.log("smth2");
-
-//     // console.log("if right", counter);
-//     liAcc.style.display = "block";
-//     previousLi.style.display = "none";
-//   } else if (counterBack === 0) {
-//     console.log("smth2");
-//     counterBack = totalPhotos;
-//     liAcc.style.display = "block";
-//     galarySlider.firstElementChild.style.display = "none";
-//         // counter - 1;
-//   } else if (counterBack > 0) {
-//     console.log("smth2", counterBack);
-//     liAcc.style.display = "block";
-//     previousLi.style.display = "none";
-//     counter - 1;
-//   }
-
-// counterBack -= 1;
-// else if (counter === totalPhotos) {
-//   liAcc.style.display = "block";
-//   previousLi.style.display = "none";
-//   // console.log('else if sec', counter);
-//   // console.log(counter, 'last else if right');
-//   counter = 0;
-//   counterBack = totalPhotos;
-// } else if (counter > 1) {
-//   console.log("else if right", counter);
-
-//   previousLi.style.display = "none";
-//   liAcc.style.display = "block";
-// }
-// if (counter === totalPhotos) {
-//   console.log('if2 right', counter);
-
-//   // liAcc.style.display = "block";
-//   // previousLi.style.display = "none";
-// }
-// counter += 1;
-// counterBack = counter - 1;
-
-// counter -= 1;
-// const liBefore = document.querySelector(`.liPhoto${counter}`);
-// const liAcc = document.querySelector(`.liPhoto${counterBack}`);
-// // liAcc.style.display = "block";
-// // liBefore.style.display = 'none';
-// if (counterBack === 0) {
-//   console.log("if back");
-
-//   counterBack = totalPhotos;
-//   liAcc.style.display = "block";
-//   liBefore.style.display = "none";
-// } else if (counterBack === 1) {
-//   console.log("else if back");
-
-//   counter = 1;
-//   counterBack = totalPhotos;
-//   galarySlider.firstElementChild.style.display = "none";
-//   liLast.style.display = "block";
-// } else if (counterBack > 1) {
-//   liAcc.style.display = "block";
-//   // liBefore.style.display = "none";
-// }
-// // liBefore.style.display = "none";
-// if (counter === 0) {
-//   counter = totalPhotos;
-// }
-// counterBack -= 1;
-// });
